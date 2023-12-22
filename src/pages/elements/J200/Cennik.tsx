@@ -15,23 +15,23 @@ function Cennik() {
     const [tPrice, settPrice] = useState(7);
 
     useEffect(() => {
-        // const promise = fetch(process.env.REACT_APP_API_URL+'/api/getPrices');
-        // promise.then((res) => {
-        //     res.json().then(data => {
-        //         setnPrice(data[0].ticketPrice);
-        //         setuPrice(data[1].ticketPrice);
-        //         setbr1Price(data[2].ticketPrice);
-        //         setbr2Price(data[3].ticketPrice);
-        //         setbr1dPrice(data[4].ticketPrice);
-        //         setbr2dPrice(data[5].ticketPrice);
-        //         setbgnPrice(data[6].ticketPrice);
-        //         setfPrice(data[7].ticketPrice);
-        //         settPrice(data[8].ticketPrice);
-        //     });
-        // })
-        // .catch((err) => {
-        //     console.log(err);
-        // })
+        const promise = fetch(process.env.REACT_APP_API_URL+'/api/getPrices');
+        promise.then((res) => {
+            res.json().then(data => {
+                setnPrice(data[0].ticketPrice);
+                setuPrice(data[1].ticketPrice);
+                setbr1Price(data[2].ticketPrice);
+                setbr2Price(data[3].ticketPrice);
+                setbr1dPrice(data[4].ticketPrice);
+                setbr2dPrice(data[5].ticketPrice);
+                setbgnPrice(data[6].ticketPrice);
+                setfPrice(data[7].ticketPrice);
+                settPrice(data[8].ticketPrice);
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     })
 
     return ( 
