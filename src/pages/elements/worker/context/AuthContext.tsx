@@ -1,10 +1,30 @@
 import { createContext, useContext, useState } from 'react';
-import axios from '../../../functionsModules/axios';
+import axios from '../../../../functionsModules/axios';
 import { useNavigate } from 'react-router-dom';
-const AuthContext = createContext({});
+type ErrorType = {
+    old_password?: string;
+    new_password?: string;
+    passwordChange?: string;
+    email?: string;
+    password?: string;
+};
+interface AuthContextType {
+    user: any;
+    errors: ErrorType;
+    getUser: () => void;
+    login: (data: any) => void;
+    logout: () => void;
+    register: (data: any) => void;
+    csrf: () => void;
+    loader: boolean;
+    setLoader: (loader: boolean) => void;
+    role: string;
+    changePassword: (data: any) => void;
+}
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider = ({ children }: any) => {
     const [user, setUser] = useState(null);
-    const [errors, setErrors] = useState([]);
+    const [errors, setErrors] = useState<ErrorType>({});
     const [role, setRole] = useState("");
     const navigate = useNavigate();
     const [loader, setLoader] = useState(false);
@@ -18,8 +38,8 @@ export const AuthProvider = ({ children }: any) => {
             setLoader(false);
             console.clear();
         } catch(e: any){
-        if(e.response.status === 401){
-            navigate('/job/login');
+        if(e?.response?.status === 401){
+            navigate('/worker/login');
             setLoader(false);
             console.clear();
         }
@@ -27,18 +47,18 @@ export const AuthProvider = ({ children }: any) => {
     };
 
     const login = async ({ ...data }) => {
-        await csrf();
+       await csrf();
         setLoader(true);
-        setErrors([]);
+        setErrors({});
         try {
             await axios.post("/login", data);
             await getUser();
             console.clear();
             setLoader(false);
-            navigate("/job/dashboard");
+            window.location.reload();
         } catch (e: any) {
-            if (e.response.status === 422) {
-                setErrors(e.response.data.errors);
+            if (e?.response?.status === 422) {
+                setErrors(e?.response?.data.errors);
                 console.clear();
                 setLoader(false);
             }
@@ -46,14 +66,14 @@ export const AuthProvider = ({ children }: any) => {
     };
 
     const changePassword = async ({ ...data}) => {
-        setErrors([]);
+        setErrors({});
         try {
             await axios.post("/api/changePassword", data).then((e) => {
                 setErrors(e.data.errors);
             });
             console.clear();
         } catch (e: any) {
-            if (e.response.status === 422) {
+            if (e?.response?.status === 422) {
                 setErrors(e.response.data.errors);
                 console.clear();
                 setLoader(false);
@@ -63,13 +83,13 @@ export const AuthProvider = ({ children }: any) => {
       
     const register = async ({ ...data }) => {
         await csrf();
-        setErrors([]);
+        setErrors({});
         try {
             await axios.post("/register", data)
             await getUser();
             navigate("/");
         } catch (e: any) {
-            if (e.response.status === 422) {
+            if (e?.response?.status === 422) {
                 setErrors(e.response.data.errors);
             }
         }
@@ -79,7 +99,7 @@ export const AuthProvider = ({ children }: any) => {
         axios.post("/logout").then(() => {
             setUser(null);
             console.clear();
-            navigate('/job/dashboard');
+            window.location.reload();
         });
     };
 

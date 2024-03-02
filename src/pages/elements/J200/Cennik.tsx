@@ -4,13 +4,14 @@ import { Panel } from 'primereact/panel';
 
 
 function Cennik() {
-    const [nPrice, setnPrice] = useState(33);
-    const [uPrice, setuPrice] = useState(28);
-    const [br1Price, setbr1Price] = useState(56);
-    const [br1dPrice, setbr1dPrice] = useState(20);
-    const [br2Price, setbr2Price] = useState(87);
-    const [br2dPrice, setbr2dPrice] = useState(20);
-    const [bgnPrice, setbgnPrice] = useState(28);
+    const [nPrice, setnPrice] = useState(36);
+    const [uPrice, setuPrice] = useState(31);
+    const [br1Price, setbr1Price] = useState(62);
+    const [br1dPrice, setbr1dPrice] = useState(25);
+    const [br2Price, setbr2Price] = useState(96);
+    const [br2dPrice, setbr2dPrice] = useState(25);
+    const [bgnPrice, setbgnPrice] = useState(35);
+    const [bguPrice, setbguPrice] = useState(30);
     const [fPrice, setfPrice] = useState(3);
     const [tPrice, settPrice] = useState(7);
 
@@ -18,15 +19,18 @@ function Cennik() {
         const promise = fetch(process.env.REACT_APP_API_URL+'/api/getPrices');
         promise.then((res) => {
             res.json().then(data => {
-                setnPrice(data[0].ticketPrice);
-                setuPrice(data[1].ticketPrice);
-                setbr1Price(data[2].ticketPrice);
-                setbr2Price(data[3].ticketPrice);
-                setbr1dPrice(data[4].ticketPrice);
-                setbr2dPrice(data[5].ticketPrice);
-                setbgnPrice(data[6].ticketPrice);
-                setfPrice(data[7].ticketPrice);
-                settPrice(data[8].ticketPrice);
+                if(data) {
+                    setnPrice(data[0].ticketPrice);
+                    setuPrice(data[1].ticketPrice);
+                    setbr1Price(data[2].ticketPrice);
+                    setbr2Price(data[3].ticketPrice);
+                    setbr1dPrice(data[4].ticketPrice);
+                    setbr2dPrice(data[5].ticketPrice);
+                    setbgnPrice(data[6].ticketPrice);
+                    setbguPrice(data[7].ticketPrice);
+                    setfPrice(data[8].ticketPrice);
+                    settPrice(data[9].ticketPrice);
+                }
             });
         })
         .catch((err) => {
@@ -68,8 +72,13 @@ function Cennik() {
                 </div>
                 <div className='ticket'>
                     <h2 className='name'>Bilet Grupowy
-                    <p>Grupa od 15 osób + Karma<br />Wymagana wcześniejsza rezerwacja</p></h2>
+                    <p>Grupa od 15 osób + Karma<br /><strong>Wymagana wcześniejsza rezerwacja</strong></p></h2>
                     <h2 className='price'>{bgnPrice} zł/os.</h2>
+                </div>
+                <div className='ticket'>
+                    <h2 className='name'>Bilet Grupowy
+                    <p>Grupa od 15 osób: dzieci, emeryci, studenci + Karma<br /><strong>Wymagana wcześniejsza rezerwacja</strong></p></h2>
+                    <h2 className='price'>{bguPrice} zł/os.</h2>
                 </div>
                 <p id='cennik-footer'>Karma dla papug {fPrice} zł<br />
                 Przysmak dla papug {tPrice} zł<br />

@@ -15,7 +15,7 @@ function Welcome() {
             <Cennik />
             <Urodziny />
             <FAQ />
-            <Honorowane />
+            {/* <Honorowane /> */}
         </div> 
     );
 }

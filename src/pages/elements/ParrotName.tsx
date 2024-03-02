@@ -13,12 +13,12 @@ function NameP(props: any) {
     const dynamicStyles = {
         color: isHovered ? props.clrH : props.clr,
         transition: '0.2s color',
-        cursor: 'pointer'
+        cursor: 'default'
     };
 
     return ( 
-        // <NLink id={props.id} to={{pathname: '/parrots/'+props.link}} clr={props.clr}><span className='name' style={dynamicStyles} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >{props.parrot}<br />({props.imie})</span></NLink>
-        <span className='name' id={props.id}>{props.parrot}<br />({props.imie})</span>
+        // <NLink id={props.id} to={{pathname: '/parrots/'+props.link}} clr={props.clr}><span className='name' style={dynamicStyles}  >{props.parrot}<br />({props.imie})</span></NLink>
+        <span className='name' style={dynamicStyles} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} id={props.id}>{props.parrot}<br />({props.imie})</span>
      );
      
 }

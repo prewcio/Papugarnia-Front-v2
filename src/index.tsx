@@ -5,12 +5,14 @@ import './index.css';
 import './pages/elements.css';
 import banner from "./assets/banner.webp";
 import logo from './assets/papugarnia-logo.webp';
-import { AuthProvider } from './pages/job/context/AuthContext';
+import { AuthProvider } from './pages/elements/worker/context/AuthContext';
 import Loader from './pages/elements/Loader';
 import { WavyContainer } from 'react-wavy-transitions';
 import Snowfall from 'react-snowfall';
-import M44 from './pages/elements/M44/Main';
 import Regulamin from './pages/Regulamin';
+import WorkDashboard from './pages/elements/worker/Dashboard';
+import Papugi from './pages/elements/papugi/Papugi';
+import Login from './pages/elements/worker/Login';
 
 
 const root = ReactDOM.createRoot(
@@ -19,10 +21,6 @@ const root = ReactDOM.createRoot(
 document.head.innerHTML += `<link rel="preload" as='image' href=`+banner+`/>
 <link rel="preload" as='image' href=`+logo+`/>`;
 
-document.addEventListener("touchstart", function (e) {
-  e.preventDefault();
-},
-{passive: true});
 
 const dzis = new Date();
 const snieg = ((dzis.getDate()>10 && dzis.getMonth() === 11) || (dzis.getDate()<25 && dzis.getMonth()===0));
@@ -80,7 +78,7 @@ root.render(
         zIndex: '2',
       }}
       // Controls the number of snowflakes that are created (defaults to 150).
-      snowflakeCount={175}
+      snowflakeCount={75}
       />
     }
     <Routes>
@@ -88,12 +86,20 @@ root.render(
       
       {/* Papugarnie */}
       <Route path='/papugarnia/warszawa' element={<Navigate to="/"/>}/> {/* Jerozolimskie 200 */}
-      <Route path='/papugarnia/warszawa-m44' element={<M44 />} /> {/* Marywilska 44 */}
 
       {/* Regulamin */}
       <Route path='/regulamin' element={<Regulamin />} />
 
+      {/* Papugi */}
+      {/* <Route path='/papugi' element={<Papugi />} /> */}
 
+      {/* Worker Menu */}
+      <Route path='/worker/login' element={<Login />} />
+      <Route path='/worker' element={<Navigate to="/worker/login" />} />
+
+      <Route path='/worker/dashboard' element={<WorkDashboard />} />
+
+      <Route path='*' element={<NotFound />}/>
 
 
     </Routes>

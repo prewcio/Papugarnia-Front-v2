@@ -12,8 +12,8 @@ function Regulamin() {
             <div id='regulaminContent'>
                 <div id='regulaminRules'>
                     <strong>1.</strong>	Warunkiem przebywania na terenie Papugarni jest wykupienie biletu wstępu.<br />
-                    <strong>2.</strong>	Papugarnia otwarta jest w godzinach 10-19/10-20 (Aleje Jerozolimskie 200), 11-18/10-18 (Marywilska 44). <br />
-                    <strong>3.</strong>	Dzieci do lat 12 mogą przebywać na terenie Papugarni wyłącznie pod opieką osób dorosłych. <br />
+                    <strong>2.</strong>	Papugarnia otwarta jest w godzinach: <strong>10-19/10-20</strong><br />
+                    <strong>3.</strong>	Dzieci do lat 12 mogą przebywać na terenie Papugarni <u>wyłącznie</u> pod opieką osób dorosłych. <br />
                     <strong>4.</strong>	Z uwagi na bezpieczeństwo papug (głównie papugi chodzące po ziemi) należy zachować szczególną ostrożność i poruszać się w taki sposób, aby nie wyrządzić papugom krzywdy. Szczególnie zabrania się biegania i skakania po sali. <br />
                     <strong>5.</strong>	Przed wejściem na teren papugarni bezwzględnie należy ściągnąć i schować: zegarki, biżuterię (pierścionki,bransoletki, łańcuszki,okulary przeciwsłoneczne itp) oraz szczgólnie uważać na kolorowe paznokcie i tipsy. <br />
                     <strong>6.</strong>	Bezwzględny zakaz wchodzenia w każdego rodzaju kolczykach. <br />
@@ -41,7 +41,7 @@ function Regulamin() {
                 </div>
                 <div id='regulaminPhoto'>
                 Fotografownie i filmowanie na terenic Papugami dozwolone jest tylko do celów prywatnych. 
-                W przypadku publikowania. wykonanych na terenie Papugami zdjęć nalezy umieścić infomacje iż zdjęcia zostały wykonane w Papugarni Carmen.
+                W przypadku publikowania. wykonanych na terenie Papugami zdjęć nalezy umieścić infomacje iż zdjęcia zostały wykonane w <br/><strong>Papugarni Carmen na Alejach Jerozolimskich 200</strong>.
                 </div>
             </div>
         </div>

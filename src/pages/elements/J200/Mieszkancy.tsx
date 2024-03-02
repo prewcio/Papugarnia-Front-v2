@@ -45,7 +45,7 @@ function Mieszkancy() {
                     <div className='resident_img'>
                         <img src={kakzol} id='kakzol_zdj' alt='Papuga - Kakadu Żółtoczuba'/>
                     </div>
-                    <NameP id='kakzol' parrot="Kakadu Żółtoczuba" imie="Mr. White" link='kakadu-zoltoczuba' clr="#e28800" clrH="#e2b100"/>
+                    <NameP id='kakzol' parrot="Kakadu Żółtoczuba" imie="Mr. White" link='kakadu-zoltoczuba' clr="#C75000" clrH="#e28800"/>
                     <p>Ten przystojniak należy do pochodzącego z okolic Indonezji endemicznego gatunku papug kakadu białych (cacatua alba). Choć papużki nie są duże - 
                         mierzą zwykle niewiele ponad 40 cm - słychać je i widać z daleka. Choć papuga wydaje się śnieżnobiała, jej piórka są 
                         od spodu żółtawe, żółty pojawia się także na końcówce grzebienia i ogonie, co najlepiej widać, gdy papuga jest locie.</p>
