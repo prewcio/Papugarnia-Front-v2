@@ -4,10 +4,12 @@ import anim from '../../assets/parrotloader.gif';
 function Loader() {
     function loader_hide() {
         let loaderek = document.getElementById('loader');
-        if(loaderek) loaderek.classList.add('hide');
         setTimeout(() => {
-            if(loaderek) loaderek.remove();
-        }, 200);
+            if(loaderek) loaderek.classList.add('hide');
+            setTimeout(() => {
+                if(loaderek) loaderek.remove();
+            }, 200);
+        }, 400);
     }
 
     useEffect(() => {

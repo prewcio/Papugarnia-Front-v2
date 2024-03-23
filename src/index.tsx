@@ -1,4 +1,4 @@
-import React, {lazy} from 'react';
+import {lazy} from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import './index.css';
@@ -9,17 +9,12 @@ import { AuthProvider } from './pages/elements/worker/context/AuthContext';
 import Loader from './pages/elements/Loader';
 import { WavyContainer } from 'react-wavy-transitions';
 import Snowfall from 'react-snowfall';
-import Regulamin from './pages/Regulamin';
-import WorkDashboard from './pages/elements/worker/Dashboard';
-import Papugi from './pages/elements/papugi/Papugi';
-import Login from './pages/elements/worker/Login';
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-document.head.innerHTML += `<link rel="preload" as='image' href=`+banner+`/>
-<link rel="preload" as='image' href=`+logo+`/>`;
+document.head.innerHTML += `<link rel="preload" as='image' href=`+logo+`/>`;
 
 
 const dzis = new Date();
@@ -29,6 +24,9 @@ const Footer = lazy(() => import("./pages/onTopElements/Footer"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Welcome = lazy(() => import('./pages/Welcome'));
 const Header = lazy(() => import( "./pages/onTopElements/Header"));
+const Regulamin = lazy(() => import('./pages/Regulamin'));
+const WorkDashboard = lazy(() => import('./pages/elements/worker/Dashboard'));
+const Login = lazy(() => import('./pages/elements/worker/Login'));
 
 document.head.innerHTML+=`
 <!--
@@ -78,7 +76,7 @@ root.render(
         zIndex: '2',
       }}
       // Controls the number of snowflakes that are created (defaults to 150).
-      snowflakeCount={75}
+      snowflakeCount={30}
       />
     }
     <Routes>

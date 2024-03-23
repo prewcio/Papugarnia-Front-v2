@@ -166,7 +166,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     align-items: center;
     justify-content: center;
 }
-#invoiceBuyContent input, .p-dropdown {
+#invoiceBuyContent input, #invoiceBuyContent .p-dropdown {
     width: 300px;
     height: 40px;
 }
@@ -456,8 +456,9 @@ footer::before{
     left: 0;
     bottom: 0;
     z-index: 10;
+    top: 0;
     filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
-    transform: translateY(-1000px);
+    transform: translateY(-100px);
     transition: width .5s ease-in-out, height .5s ease-in-out;
 }
 
@@ -509,6 +510,16 @@ footer::before{
 #footerContact {
     width: 80vw;
     height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    align-items: center;
+    /* margin-right: 100px; */
+    /* gap: 300px; */
+}
+#footerContactHeader {
+    width: 80vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     margin-left: 10%;
@@ -666,7 +677,7 @@ footer::after{
         transform: translateX(0);
     }
     #map {
-        width: 80%;
+        width: 100%;
     }
     #btF,#koF,#ipF,#jspF,#cmgF,#cmkpF{
         width: 100% !important;
@@ -718,7 +729,7 @@ footer::after{
         width: 100vw;
     }
     #map {
-        width: 90%;
+        width: 100%;
     }
     #urodziny-offer {
         margin-top: 50px;
@@ -881,7 +892,7 @@ footer::after{
         width: 100px;
     }
     footer::before{
-        height: 29vw;
+        height: 0vw;
         width: 30vw;
         transform: translateY(-800px);
     }
@@ -1865,9 +1876,23 @@ footer::after{
     flex-wrap: wrap;
     gap: 10px;
 }
+.footerContactForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    gap: 1px;
+}
+.footerContactForm textarea {
+    resize: vertical;
+}
+.footerContactFromDropdown{
+    width: 100% !important;
+}
 .resident_main {
     width: 250px;
-    height: 600px;
+    max-height: 600px;
     overflow: hidden;
     border-radius: 10px;
     text-align: center;
@@ -1964,7 +1989,7 @@ footer::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: .5s height;
+    transition: .2s height;
     padding: 10px 0 10px 0;
     border-bottom: 1px solid rgba(0,0,0,0.3);
 }
@@ -2423,5 +2448,10 @@ footer::after{
         }
     #uroOffer {
         padding: 10px !important;
+    }
+}
+@media screen and (max-width: 510px) {
+    .carmen_residents {
+        gap: 2px;
     }
 }

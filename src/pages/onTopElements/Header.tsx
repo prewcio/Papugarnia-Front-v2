@@ -10,7 +10,7 @@ function Header() {
     const [loc, setLoc]: any = useState();
     const [load, setLoad] = useState(0);
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
-    const igURL = "https://www.instagram.com/papugarnia_warszawa_carmen";
+    const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
     
     const dzis = new Date();
     const snieg = ((dzis.getDate()>10 && dzis.getMonth() === 11) || (dzis.getDate()<25 && dzis.getMonth()===0));
@@ -34,7 +34,7 @@ function Header() {
         const logo = document.getElementById('logo') as HTMLImageElement;
         const bannerLogo = document.getElementById('bnrLogo') as HTMLImageElement;
         const bannerImg = document.getElementById('bannerImg');
-        const hmLinksMenu = document.getElementById('hmLinksMenu');
+        // const hmLinksMenu = document.getElementById('hmLinksMenu');
         if(myElement && snieg){
             myElement.style.setProperty('--banner-after', 'URL(' + harchr + ')');
             if(logo) logo.src = logochr;
@@ -44,7 +44,30 @@ function Header() {
         if(bannerImg) bannerImg.setAttribute('draggable', 'false');
         if(bannerLogo) bannerLogo.setAttribute('draggable', 'false');
         setLoad(1);
+
+        if (window.location.pathname === "/") {
+            const section = window.location.hash.substr(1); // Pobieranie id sekcji z hasha
+            if (section) {
+                const el = document.getElementById(section);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
     }, [load, snieg])
+    const scrollToEl = (el: string) => {
+        document.getElementById(el)?.scrollIntoView({behavior: 'smooth'});
+    }
+
+    const handleLinkClick = (path: string, sectionId: string) => {
+        if (window.location.pathname !== path) {
+            window.location.href = path; // Przekierowanie na inną stronę
+            scrollToEl(sectionId)
+        } else {
+            scrollToEl(sectionId); // Scroll do odpowiedniej sekcji
+        }
+    };
+
     return ( 
         <>
             <div className='header'>
@@ -62,6 +85,8 @@ function Header() {
                 <div className='headerLinks' id='hLinks'>
                     <NLink clr="#03a60b" to={{pathname: "/"}}>STRONA GŁÓWNA</NLink>
                     <NLink clr="#2202d4" to={{pathname: "/regulamin"}}>REGULAMIN</NLink>
+                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#cennik", "cennik")}>CENNIK</button>
+                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#urodziny", "urodziny")}>URODZINY</button>
                 </div>
                 <div id='hmLinksMenu' onClick={mobileMenu}>
                     <span></span>
@@ -73,6 +98,8 @@ function Header() {
                 <div id='hmLinksBcg'>
                     <NLink clr="#03a60b" to={{pathname: "/"}}>STRONA GŁÓWNA</NLink>
                     <NLink clr="#2202d4" to={{pathname: "/regulamin"}}>REGULAMIN</NLink>
+                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#cennik", "cennik")}>CENNIK</button>
+                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#urodziny", "urodziny")}>URODZINY</button>
                     <div className='flexend'>
                         <a href={fbURL} target='_blank' rel='noreferrer' aria-label='Facebook Papugarnia Carmen'><FaFacebook id='fb'/></a>
                         <a href={igURL} target='_blank' rel='noreferrer' aria-label='Instagram Papugarnia Carmen'><FaInstagram id='ig'/></a>
@@ -100,7 +127,7 @@ function Header() {
                         alt="" />
                     <figure className='divider' id='headerDivider'/>
                     <span id='bannerLogo'>
-                        <img id='bnrLogo' src={logo} alt="Logo Papugarni" />
+                        <img id='bnrLogo' loading='lazy' src={logo} alt="Logo Papugarni" />
                         <h1 id="bannerText">Papugarnia Carmen</h1>
                     </span>
                 </div> 

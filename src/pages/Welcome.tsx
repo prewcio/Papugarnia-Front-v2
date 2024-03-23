@@ -1,7 +1,6 @@
-import React, { Component, useEffect } from 'react'
+import { useEffect } from 'react'
 import Mieszkancy from './elements/J200/Mieszkancy';
 import Cennik from './elements/J200/Cennik';
-import Honorowane from './elements/J200/Honorowane';
 import FAQ from './elements/J200/FAQ';
 import Urodziny from './elements/J200/Urodziny';
 
@@ -15,7 +14,6 @@ function Welcome() {
             <Cennik />
             <Urodziny />
             <FAQ />
-            {/* <Honorowane /> */}
         </div> 
     );
 }

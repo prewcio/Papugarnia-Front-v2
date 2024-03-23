@@ -4,6 +4,7 @@ import { GrMail } from "react-icons/gr";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import KW from '../../assets/KW.webp';
 import KDR from '../../assets/KDR.webp';
+import FooterContact from './FooterContact';
 
 function Footer() {
     const addURL = "https://goo.gl/maps/5Hyc4iSe29Zqwi1RA";
@@ -12,7 +13,7 @@ function Footer() {
     const mail = "warszawa.j200@papugarniacarmen.pl";
     const mailURL = "mailto:warszawa.j200@papugarniacarmen.pl";
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
-    const igURL = "https://www.instagram.com/papugarnia_warszawa_carmen";
+    const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
  
     useEffect(() => {
         const kdrel = document.getElementById('kdr');
@@ -50,10 +51,15 @@ function Footer() {
             <div className='scrollToTop' id="stt">
             </div>
             <footer>
+                <div id='footerContactHeader'>
+                    <h1>Papuzi Kontakt</h1>
+                    <p>Jeśli szukasz kontaktu z nami to tutaj masz kilka sposobów, aby się skontaktować!</p>
+                    <FooterContact />
+                </div>
                 <div id='footerContact'>
+                    
                     <div id='contactInfo'>
-                        <h1>Papuzi Kontakt</h1>
-                        <p>Jeśli szukasz kontaktu z nami to tutaj masz kilka sposobów, aby się skontaktować!</p>
+                        
                         <h2 className='contactInfoElement'><BsPinMapFill id="mapPin" className='icon' />&emsp;Nasza papugarnia</h2>
                         <h3><a href={addURL} target='_blank' rel="noreferrer">Warszawa, Al. Jerozolimskie 200<br />(Wejście od strony ul. Łopuszańskiej)<br />
                         </a>
@@ -67,19 +73,22 @@ function Footer() {
                         <h3><a href={mailURL} target='_blank' rel="noreferrer">{mail}</a></h3>
                         <h3 className='contactInfoElement social'><a href={fbURL} target='_blank' rel='noreferrer' aria-label='Facebook Papugarnia Carmen'><FaFacebook id='fb'/></a><a href={igURL} target='_blank' rel='noreferrer' aria-label='Instagram Papugarnia Carmen'><FaInstagram id='ig'/></a></h3>
                     </div>
+                    
                     <div id='map'>
-                        <iframe title="papugarniaCarmenMap" id='mapa' frameBorder="0" src="https://maps.google.com/maps?hl=pl&amp;q=Papugarnia%20Carmen%20Jerozolimskie%20200%20Warszawa+(Papugarnia%20Carmen)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        <iframe title="papugarniaCarmenMap" loading='lazy' id='mapa' frameBorder="0" src="https://maps.google.com/maps?hl=pl&amp;q=Papugarnia%20Carmen%20Jerozolimskie%20200%20Warszawa+(Papugarnia%20Carmen)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                     </div>
                 </div>
                 <div id='HonorowaneKarty'>
                     <div id='karty'>
-                        <a href="https://rodzina.gov.pl"><img id='kdr' src={KDR} alt='Karta Dużej Rodziny' /></a>
-                        <a href="https://karta.um.warszawa.pl"><img id='kw' src={KW} alt='Karta Warszawiaka' /></a>
+                        <a href="https://rodzina.gov.pl"><img loading='lazy' id='kdr' src={KDR} alt='Karta Dużej Rodziny' /></a>
+                        <a href="https://karta.um.warszawa.pl"><img loading='lazy' id='kw' src={KW} alt='Karta Warszawiaka' /></a>
                     </div>
                 </div>
                 <div id='footerLinks'>
                     <a href="/">Strona główna</a>
                     <a href='/regulamin'>Regulamin Papugarni</a>
+                    <a href='/#cennik'>Cennik</a>
+                    <a href='/#Urodziny'>Urodziny</a>
                 </div>
                 {/* <br /><a href='/polityka-prywatnosci'>POLITYKA PRYWATNOŚCI</a> */}
                 <p className='ftrCont' id='ctrCont'>&copy; {new Date().getFullYear()} Papugarnia Carmen Warszawa. Wszelkie prawa zastrzeżone.<br /><br/>Proudly made by <a href="https://prewcio.dev">Prewcioo</a></p>
