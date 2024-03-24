@@ -43,7 +43,7 @@ function Login() {
             getUser();
         }
         setLoader(false);
-    }, []);
+    }, [getUser, setLoader, user]);
     useEffect(() => {
         if(user) {
             navigate('/worker/dashboard');

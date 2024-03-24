@@ -4,6 +4,7 @@ import logo from '../../assets/papugarnia-logo.webp';
 import harchr from '../../assets/banner-harlequin-christ.webp'
 import logochr from '../../assets/papugarnia-logo-chr.webp';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import HeaderList from './HeaderList';
 
 
 function Header() {
@@ -85,8 +86,11 @@ function Header() {
                 <div className='headerLinks' id='hLinks'>
                     <NLink clr="#03a60b" to={{pathname: "/"}}>STRONA GŁÓWNA</NLink>
                     <NLink clr="#2202d4" to={{pathname: "/regulamin"}}>REGULAMIN</NLink>
-                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#cennik", "cennik")}>CENNIK</button>
-                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#urodziny", "urodziny")}>URODZINY</button>
+                    <HeaderList label='OFERTA'>
+                        <NLink clr="#4E9F3D" to={{pathname: "/urodziny"}}>URODZINY</NLink>
+                        <NLink clr="#D81159" to={{pathname: "/grupy"}}>GRUPY</NLink>
+                        <NLink clr="#FFBC42" to={{pathname: "/indywidualna"}}>INDYWIDUALNE</NLink>
+                    </HeaderList>
                 </div>
                 <div id='hmLinksMenu' onClick={mobileMenu}>
                     <span></span>

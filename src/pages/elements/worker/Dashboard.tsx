@@ -16,7 +16,7 @@ function WorkDashboard() {
         throw new Error("useAuthContext must be used within a AuthProvider");
     }
 
-    const { login, errors, user, getUser, loader, setLoader } = authContext;
+    const { user, loader, setLoader } = authContext;
 
     const checkRole = ((req: any) => {
         return role === req;
@@ -24,6 +24,7 @@ function WorkDashboard() {
 
     useEffect(() => {
         if(user) {
+            console.log(role)
             setLoader(false);
         } else {
             navigate('/worker/login');
