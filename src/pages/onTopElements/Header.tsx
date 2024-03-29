@@ -4,11 +4,14 @@ import logo from '../../assets/papugarnia-logo.webp';
 import harchr from '../../assets/banner-harlequin-christ.webp'
 import logochr from '../../assets/papugarnia-logo-chr.webp';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import HeaderList from './HeaderList';
+import Red from '../elements/Red';
 
 
 function Header() {
     const [loc, setLoc]: any = useState();
     const [load, setLoad] = useState(0);
+    const [notify, setNotify] = useState(<p><strong><Red>UWAGA! </Red></strong>Papugarnia w wielkanoc będzie czynna: 30.03 (sobota) 10:00-18:00 | 31.03 (niedziela) 14:00-19:00 | 01.04 (poniedziałek) 13:00 - 19:00</p>);
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
     const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
     
@@ -26,10 +29,13 @@ function Header() {
 
             hmLinks.classList.toggle('active');
         }
+        handleNotify();
     }
 
     useEffect(() => {
+        handleNotify(); // Initial call to set up the correct state
         setLoc("Aleje Jerozolimskie 200");
+        window.addEventListener('resize', handleNotify);
         const myElement = document.getElementById('headBann');
         const logo = document.getElementById('logo') as HTMLImageElement;
         const bannerLogo = document.getElementById('bnrLogo') as HTMLImageElement;
@@ -54,9 +60,23 @@ function Header() {
                 }
             }
         }
-    }, [load, snieg])
+    }, [load, snieg]);
+    
     const scrollToEl = (el: string) => {
         document.getElementById(el)?.scrollIntoView({behavior: 'smooth'});
+    }
+
+    const handleNotify = () =>{
+        const notification = document.querySelector('.notification');
+        const notificationContent = notification?.querySelector('p');
+        
+        if (notificationContent && notification) {
+            // Check if the content's width is greater than the notification container's width
+            const shouldScroll = (notificationContent as HTMLElement).offsetWidth > (notification as HTMLElement).offsetWidth;
+            
+            // Add or remove the 'scroll-animation' class based on the condition
+            notificationContent.classList.toggle('scroll-animation', shouldScroll);
+        }
     }
 
     const handleLinkClick = (path: string, sectionId: string) => {
@@ -85,8 +105,11 @@ function Header() {
                 <div className='headerLinks' id='hLinks'>
                     <NLink clr="#03a60b" to={{pathname: "/"}}>STRONA GŁÓWNA</NLink>
                     <NLink clr="#2202d4" to={{pathname: "/regulamin"}}>REGULAMIN</NLink>
-                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#cennik", "cennik")}>CENNIK</button>
-                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#urodziny", "urodziny")}>URODZINY</button>
+                    <HeaderList label='OFERTA'>
+                        <NLink clr="#4E9F3D" to={{pathname: "/urodziny"}}>URODZINY</NLink>
+                        <NLink clr="#D81159" to={{pathname: "/grupy"}}>GRUPY</NLink>
+                        <NLink clr="#FFBC42" to={{pathname: "/indywidualna"}}>INDYWIDUALNE</NLink>
+                    </HeaderList>
                 </div>
                 <div id='hmLinksMenu' onClick={mobileMenu}>
                     <span></span>
@@ -130,7 +153,12 @@ function Header() {
                         <img id='bnrLogo' loading='lazy' src={logo} alt="Logo Papugarni" />
                         <h1 id="bannerText">Papugarnia Carmen</h1>
                     </span>
-                </div> 
+                </div>
+                {notify &&
+                    <div className='notification'>
+                        {notify}
+                    </div> 
+                }
             </>
             
      );

@@ -87,8 +87,9 @@ function Footer() {
                 <div id='footerLinks'>
                     <a href="/">Strona główna</a>
                     <a href='/regulamin'>Regulamin Papugarni</a>
-                    <a href='/#cennik'>Cennik</a>
-                    <a href='/#Urodziny'>Urodziny</a>
+                    <a href='/urodziny'>Oferta Urodzinowa</a>
+                    <a href='/grupy'>Oferta Grupowa</a>
+                    <a href='/indywidualna'>Oferta Indywidualna</a>
                 </div>
                 {/* <br /><a href='/polityka-prywatnosci'>POLITYKA PRYWATNOŚCI</a> */}
                 <p className='ftrCont' id='ctrCont'>&copy; {new Date().getFullYear()} Papugarnia Carmen Warszawa. Wszelkie prawa zastrzeżone.<br /><br/>Proudly made by <a href="https://prewcio.dev">Prewcioo</a></p>

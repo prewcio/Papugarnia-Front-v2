@@ -20,7 +20,7 @@ function MenuJ200({rola}: {rola: any}) {
         throw new Error("useAuthContext must be used within a AuthProvider");
     }
 
-   const { user, getUser, logout, role } = authContext;
+   const { logout } = authContext;
 
     const chkRl = ((req: any) => {
         return rola === req;

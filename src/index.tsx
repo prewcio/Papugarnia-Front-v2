@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import './index.css';
 import './pages/elements.css';
-import banner from "./assets/banner.webp";
 import logo from './assets/papugarnia-logo.webp';
 import { AuthProvider } from './pages/elements/worker/context/AuthContext';
 import Loader from './pages/elements/Loader';
 import { WavyContainer } from 'react-wavy-transitions';
 import Snowfall from 'react-snowfall';
+import UrodzinySP from './pages/elements/subpages/UrodzinySP';
+import GrupySP from './pages/elements/subpages/GrupySP';
+import IndywidualnaSP from './pages/elements/subpages/IndywidualnaSP';
 
 
 const root = ReactDOM.createRoot(
@@ -73,10 +75,10 @@ root.render(
         position: 'fixed',
         height: '100vh',
         width: '100vw',
-        zIndex: '2',
+        zIndex: '5',
       }}
       // Controls the number of snowflakes that are created (defaults to 150).
-      snowflakeCount={30}
+      snowflakeCount={80}
       />
     }
     <Routes>
@@ -87,6 +89,9 @@ root.render(
 
       {/* Regulamin */}
       <Route path='/regulamin' element={<Regulamin />} />
+      <Route path='/urodziny' element={<UrodzinySP />} />
+      <Route path='/grupy' element={<GrupySP />} />
+      <Route path='/indywidualna' element={<IndywidualnaSP />} />
 
       {/* Papugi */}
       {/* <Route path='/papugi' element={<Papugi />} /> */}
