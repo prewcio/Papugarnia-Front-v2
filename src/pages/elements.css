@@ -44,6 +44,37 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     /* Add more styling here for visibility, background, etc. */
 }
 
+.notification {
+    position: fixed;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    padding: 10px;
+    z-index: 6;
+    width: 100vw;
+    height: fit-content;
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    top: 95px;
+    border-radius: 0 0px 10px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.notification p {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.scroll-animation {
+    animation: scrollText 30s linear infinite; /* Slower animation */
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 .offer {
     margin-top: 50px;
 }

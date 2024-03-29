@@ -75,7 +75,7 @@ root.render(
         position: 'fixed',
         height: '100vh',
         width: '100vw',
-        zIndex: '2',
+        zIndex: '5',
       }}
       // Controls the number of snowflakes that are created (defaults to 150).
       snowflakeCount={80}
