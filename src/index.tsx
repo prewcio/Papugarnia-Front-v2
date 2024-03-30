@@ -11,6 +11,7 @@ import Snowfall from 'react-snowfall';
 import UrodzinySP from './pages/elements/subpages/UrodzinySP';
 import GrupySP from './pages/elements/subpages/GrupySP';
 import IndywidualnaSP from './pages/elements/subpages/IndywidualnaSP';
+import Papugi from './pages/elements/papugi/Papugi';
 
 
 const root = ReactDOM.createRoot(
@@ -94,7 +95,7 @@ root.render(
       <Route path='/indywidualna' element={<IndywidualnaSP />} />
 
       {/* Papugi */}
-      {/* <Route path='/papugi' element={<Papugi />} /> */}
+      <Route path='/papugi' element={<Papugi />} />
 
       {/* Worker Menu */}
       <Route path='/worker/login' element={<Login />} />
