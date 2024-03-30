@@ -17,7 +17,7 @@ export default function HeaderList({ className, label, children }: HeaderListPro
     return (
         <>
             {label && 
-                <button ref={headerRef} className='react-wavy-transitions__wavy-link' style={{ textAlign: 'center', paddingRight: '10px', borderRight: isListVisible ? '3px solid rgba(0,0,0,0.4)' : '3px solid transparent', transition: 'border 0.3s ease' }} onClick={toggleListVisibility}>
+                <button ref={headerRef} className='react-wavy-transitions__wavy-link' style={{ textAlign: 'center', paddingRight: '10px', borderRight: isListVisible ? '1px solid rgba(0,0,0,0.4)' : '1px solid transparent', transition: 'border 1s ease' }} onClick={toggleListVisibility}>
                     {label}
                 </button> 
             }

@@ -12,6 +12,7 @@ import UrodzinySP from './pages/elements/subpages/UrodzinySP';
 import GrupySP from './pages/elements/subpages/GrupySP';
 import IndywidualnaSP from './pages/elements/subpages/IndywidualnaSP';
 import Papugi from './pages/elements/papugi/Papugi';
+import ParrotPage from './pages/elements/papugi/ParrotPage';
 
 
 const root = ReactDOM.createRoot(
@@ -97,6 +98,7 @@ root.render(
 
       {/* Papugi */}
       <Route path='/papugi' element={<Papugi />} />
+      <Route path='/papugi/:codename' element={<ParrotPage />} />
 
       {/* Worker Menu */}
       <Route path='/worker/login' element={<Login />} />

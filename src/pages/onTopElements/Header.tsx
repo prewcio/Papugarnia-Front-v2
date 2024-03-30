@@ -6,6 +6,7 @@ import logochr from '../../assets/papugarnia-logo-chr.webp';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import HeaderList from './HeaderList';
 import Red from '../elements/Red';
+import HeaderListMobile from './HeaderListMobile';
 
 
 function Header() {
@@ -121,8 +122,11 @@ function Header() {
                 <div id='hmLinksBcg'>
                     <NLink clr="#03a60b" to={{pathname: "/"}}>STRONA GŁÓWNA</NLink>
                     <NLink clr="#2202d4" to={{pathname: "/regulamin"}}>REGULAMIN</NLink>
-                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#cennik", "cennik")}>CENNIK</button>
-                    <button className='react-wavy-transitions__wavy-link' onClick={() => handleLinkClick("/#urodziny", "urodziny")}>URODZINY</button>
+                    <HeaderListMobile label='OFERTA'>
+                        <NLink clr="#4E9F3D" to={{pathname: "/urodziny"}}>URODZINY</NLink>
+                        <NLink clr="#D81159" to={{pathname: "/grupy"}}>GRUPY</NLink>
+                        <NLink clr="#FFBC42" to={{pathname: "/indywidualna"}}>INDYWIDUALNE</NLink>
+                    </HeaderListMobile>
                     <div className='flexend'>
                         <a href={fbURL} target='_blank' rel='noreferrer' aria-label='Facebook Papugarnia Carmen'><FaFacebook id='fb'/></a>
                         <a href={igURL} target='_blank' rel='noreferrer' aria-label='Instagram Papugarnia Carmen'><FaInstagram id='ig'/></a>
