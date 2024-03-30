@@ -67,12 +67,12 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 
 .scroll-animation {
-    animation: scrollText 30s linear infinite; /* Slower animation */
+    animation: scrollText 20s linear infinite; /* Slower animation */
 }
 
 @keyframes scrollText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(50%); }
+    100% { transform: translateX(-101%); }
 }
 
 .offer {

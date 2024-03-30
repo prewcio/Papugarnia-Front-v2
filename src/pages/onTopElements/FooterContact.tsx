@@ -5,6 +5,8 @@ import { MdQuestionAnswer } from "react-icons/md";
 
 import { InputTextarea } from "primereact/inputtextarea"
 import { FormEvent, useState } from "react"
+import axios from "axios";
+
 
 export default function FooterContact() {
     const [formData, setFormData] = useState({
@@ -17,7 +19,7 @@ export default function FooterContact() {
     const submitForm = ((e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if(formData.name.length > 0 && formData.type !== null && formData.email.length > 0 && formData.content.length > 0) {
-            console.log(formData);
+            axios.post(process.env.REACT_APP_API_URL+'/api/sendMail', formData);
             setError(-1);
             setFormData({
                 name: "",

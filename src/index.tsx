@@ -1,4 +1,4 @@
-import {lazy} from 'react';
+import {lazy, useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import './index.css';
@@ -30,6 +30,7 @@ const Header = lazy(() => import( "./pages/onTopElements/Header"));
 const Regulamin = lazy(() => import('./pages/Regulamin'));
 const WorkDashboard = lazy(() => import('./pages/elements/worker/Dashboard'));
 const Login = lazy(() => import('./pages/elements/worker/Login'));
+
 
 document.head.innerHTML+=`
 <!--
