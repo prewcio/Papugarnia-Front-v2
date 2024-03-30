@@ -237,12 +237,23 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     align-items: center;
     justify-content: center;
 }
+.parrotLink {
+    text-decoration: none;
+    color: black !important;
+}
 #invoiceBuyContent p{
     margin-top: 5px;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
+}
+.parrotName {
+    font-size: 26px !important;
+    margin: 0 !important;
+}
+.parrot_main {
+    height: fit-content !important;
 }
 #invoiceBuyContent input, #invoiceBuyContent .p-dropdown {
     width: 300px;
@@ -889,12 +900,12 @@ footer::after{
         transform: translateX(0);
     }
     .banner::after{
-        width: 90vw;
-        height: 70vh;
+        width: 85vw;
+        height: 75vh;
     }
     footer::before{
-        height: 29vw;
-        width: 30vw;
+        height: 0vw;
+        width: 0vw;
         transform: translateY(-800px);
     }
     #btF,#koF,#ipF,#jspF,#cmgF,#cmkpF{
