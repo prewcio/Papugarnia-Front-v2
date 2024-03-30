@@ -1,4 +1,4 @@
-import {lazy} from 'react';
+import {lazy, useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import './index.css';
@@ -11,6 +11,7 @@ import Snowfall from 'react-snowfall';
 import UrodzinySP from './pages/elements/subpages/UrodzinySP';
 import GrupySP from './pages/elements/subpages/GrupySP';
 import IndywidualnaSP from './pages/elements/subpages/IndywidualnaSP';
+import csrf from './pages/elements/worker/context/AuthContext';
 
 
 const root = ReactDOM.createRoot(
@@ -29,6 +30,7 @@ const Header = lazy(() => import( "./pages/onTopElements/Header"));
 const Regulamin = lazy(() => import('./pages/Regulamin'));
 const WorkDashboard = lazy(() => import('./pages/elements/worker/Dashboard'));
 const Login = lazy(() => import('./pages/elements/worker/Login'));
+
 
 document.head.innerHTML+=`
 <!--
