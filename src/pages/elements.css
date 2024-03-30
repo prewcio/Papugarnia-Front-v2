@@ -40,8 +40,46 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     width: fit-content; /* Adjust as needed */
     max-width: 0px;
     overflow: hidden; /* Ensures content is not visible when container's max-height is 0 */
-    transition: max-width 1s ease-in-out, padding-left .3s ease-in-out; /* Smooth transition for sliding up and down */
+    transition: max-width 1s ease-in-out, padding-left .7s ease-in-out; /* Smooth transition for sliding up and down */
     /* Add more styling here for visibility, background, etc. */
+}
+.parrots_list_img img{
+    border-radius: 20px !important;
+    filter: none !important;
+}
+#hmLinksBcg > .list-content-mobile button:first-child {
+    margin-top: 0 !important;
+}
+.hmLinks button {
+    font-family: 'Varela Round', sans-serif;
+    padding-right: 20px;
+    font-size: 24px;
+    color: black;
+    transition: color .75s;
+    border-bottom: solid 2px rgba(128, 128, 128, 0.3);
+}
+
+.list-content-mobile {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; Allows it to be placed directly under the button */
+    z-index: 5000 !important; /* Ensures it's below the button */
+    text-align: center;
+    gap: 35px;
+    /* padding-right: 5px;
+    padding-left: 5px; */
+    margin: 0;
+    right: 0;
+    width: 100vw;
+    height: fit-content;
+    max-height: 0px;
+    overflow: hidden; /* Ensures content is not visible when container's max-height is 0 */
+    transition: max-width 1s ease-in-out, padding-left .3s ease-in-out, visibility .3s; /* Smooth transition for sliding up and down */
+    /* Add more styling here for visibility, background, etc. */
+}
+.list-content-mobile button {
+    width: 100%;
 }
 
 .notification {
@@ -88,6 +126,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     width: fit-content;
 }
 .list-content.visible {
+    visibility: visible !important;
     padding-left: 10px;
     max-width: 100vw; /* Adjust based on your content's needs. Might need a specific pixel value for smoother animation */
     /* No need to repeat the transition property here unless you want a different effect when becoming visible */
@@ -114,6 +153,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100vw;
     align-items: center;
 }
 .content h1{
@@ -166,9 +206,33 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     align-items: center;
     justify-content: center;
 }
+.parrot-overview {
+    max-width: 90vw;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 10px;
+    align-items: center;
+}
+.parrot-info {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.parrot-info p.info {
+    font-size: 1.5rem;
+}
 .invoicer label{
     margin-left: 5px;
 }
+.parrot-overview img {
+    height: 30vh;
+    border-radius: 20px;
+    
+}
+
 .invoiceItem {
     display: flex;
     flex-direction: column;
@@ -240,6 +304,10 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 .parrotLink {
     text-decoration: none;
     color: black !important;
+    transition: color .3s;
+}
+.parrotLink:focus, .parrotLink:hover {
+    color: green !important;
 }
 #invoiceBuyContent p{
     margin-top: 5px;
@@ -516,6 +584,7 @@ footer {
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
+    overflow-x: hidden;
     width: 100vw;
     background-color: #091070;
     color: white;
@@ -785,9 +854,20 @@ footer::after{
     .faqimg {
         width: 90vw !important;
     }
-
+    .footerContactFromDropdown > .p-inputtext{
+        width: 80vw;
+    }
 }
 @media screen and (max-width: 750px) {
+    .parrot-overview {
+        flex-direction: column;
+        text-align: center;
+    }
+    .parrot-info h4 {
+        transform: translateX(5px);
+        max-width: 95vw;
+        padding: 2.5vw;
+    }
     #urodziny-offer {
         width: 100vw !important;
         height: 1000px !important;
@@ -1294,6 +1374,12 @@ footer::after{
         width: 50px;
     }
 }
+@media screen and (max-width: 360px) {
+    .parrot-overview img {
+        width: 85vw;
+        height: 85vw;
+    }
+}
 @media screen and (min-width: 331px) and (max-width: 360px) {
     #urodziny-offer {
         width: 100vw !important;
@@ -1496,6 +1582,7 @@ footer::after{
     transition: 0.2s color;
 }
 #karty {
+    max-width: 100vw;
     margin-top: 30px;
     display: flex;
     gap: 20px;
@@ -1517,7 +1604,7 @@ footer::after{
     padding: 5px;
 }
 #HonorowaneKarty img {
-    height: 200px;
+    max-height: 200px;
     box-shadow: 0;
     transition: .5s box-shadow, .5s filter;
     border: 1px solid rgba(0,0,0,.05);
@@ -1967,6 +2054,8 @@ footer::after{
     gap: 10px;
 }
 .footerContactForm {
+    max-width: 400px;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -2101,6 +2190,44 @@ footer::after{
 .shown .Question {
     border-bottom: 1px solid #afafafa1;
     transition: .2s border-bottom;
+}
+.parrots-other-div {
+    width: 90vw;
+    max-width: 655px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+}
+.parrots-other-div h2 {
+    margin-bottom: 5px;
+}
+.parrots-other {
+    align-items: center;
+    justify-content: center;
+    max-width: 655px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px
+}
+.parrots-other-element img {
+    filter: none !important;
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+}
+.parrots-other-element.resident_main p {
+    margin: 2px !important;
+}
+.parrots-other-element > .resident_img {
+    margin: 0 !important;
+    height: fit-content !important;
+    width: fit-content !important;
+}
+.parrots-other-element {
+    width: fit-content !important;
+    height: fit-content !important;
 }
 .Answer {
     max-width: 95%;
@@ -2543,5 +2670,14 @@ footer::after{
 @media screen and (max-width: 510px) {
     .carmen_residents {
         gap: 2px;
+    }
+    #HonorowaneKarty img{
+        max-width: 80vw;
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
     }
 }

@@ -4,19 +4,22 @@ import React, { useEffect, useState } from 'react'
 import TxtDiv from '../TextDiv';
 import Loading from '../LoadingContent';
 import { useNavigate } from 'react-router-dom';
-import useAuthContext from './context/AuthContext';
 import Req from '../Req';
+import useAuthContext from './context/AuthContext';
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const authContext = useAuthContext();
 
     if (!authContext) {
-        throw new Error("useAuthContext must be used within a AuthProvider");
+        throw new Error("AuthContext is undefined");
     }
 
     const { login, errors, user, getUser, loader, setLoader } = authContext;
-    
+
+
+
+
     const navigate = useNavigate();
 
     const handleSubmit = async (e: any) => {
@@ -43,7 +46,7 @@ function Login() {
             getUser();
         }
         setLoader(false);
-    }, [getUser, setLoader, user]);
+    }, [user]);
     useEffect(() => {
         if(user) {
             navigate('/worker/dashboard');
@@ -62,7 +65,7 @@ function Login() {
                     <form onSubmit={handleSubmit} id='loginform'>
                         <label htmlFor='login' className="form-label">Nazwa użytkownika<Req /></label><br />
                         <InputText required id="login" name="login" placeholder="Nazwa użytkownika" value={username} onChange={(e) => setUsername(e.target.value)} />
-                        {errors.email !== "These credentials do not match our records." && errors.email &&
+                        {errors.email?.includes("These credentials do not match our records.") && errors.email &&
                             <span className="errorText"><br />To pole jest wymagane.</span>
                         }
                         <br /><br />
@@ -77,7 +80,7 @@ function Login() {
                         <Button label='Zaloguj' type='submit' aria-label='Zaloguj' />
                     </form>
                     <div id="login-status">
-                        {errors.email === "These credentials do not match our records." &&
+                        {errors.email?.includes("These credentials do not match our records.") &&
                             <span className="errorText">Błędny login lub hasło</span>
                         }
                     </div>

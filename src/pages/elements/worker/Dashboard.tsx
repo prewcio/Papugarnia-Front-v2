@@ -4,8 +4,7 @@ import MenuJ200 from './Menu';
 import Loading from '../LoadingContent';
 import useAuthContext from './context/AuthContext';
 function WorkDashboard() {
-    const [role, setRole] = useState("admin");
-    const [place, setPlace] = useState("j200");
+    const [role, setRole] = useState("worker");
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -16,15 +15,16 @@ function WorkDashboard() {
         throw new Error("useAuthContext must be used within a AuthProvider");
     }
 
-    const { user, loader, setLoader } = authContext;
+    const { user, getUser, loader, setLoader } = authContext;
 
     const checkRole = ((req: any) => {
         return role === req;
     })
 
     useEffect(() => {
+        getUser();
         if(user) {
-            console.log(role)
+            setRole(user.role)
             setLoader(false);
         } else {
             navigate('/worker/login');
