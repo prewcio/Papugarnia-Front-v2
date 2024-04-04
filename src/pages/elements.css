@@ -2193,7 +2193,7 @@ footer::after{
 }
 .parrots-other-div {
     width: 90vw;
-    max-width: 655px;
+    max-width: 685px;
     margin-top: 10px;
     padding: 10px;
     border: 1px solid rgba(0,0,0,0.3); 
@@ -2206,10 +2206,10 @@ footer::after{
 .parrots-other {
     align-items: center;
     justify-content: center;
-    max-width: 655px;
+    max-width: 685px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px
+    gap: 5px
 }
 .parrots-other-element img {
     filter: none !important;
@@ -2226,7 +2226,8 @@ footer::after{
     width: fit-content !important;
 }
 .parrots-other-element {
-    width: fit-content !important;
+    width: 215px !important;
+
     height: fit-content !important;
 }
 .Answer {
