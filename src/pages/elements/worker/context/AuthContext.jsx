@@ -68,6 +68,9 @@ export const AuthProvider = ({ children }) => {
                 console.clear();
                 setLoader(false);
             }
+            else if(e.response.status === 419) {
+              window.location.reload();
+            }
         }
     };
 
@@ -85,6 +88,9 @@ export const AuthProvider = ({ children }) => {
                 console.clear();
                 setLoader(false);
             }
+            else if(e.response.status === 419) {
+              window.location.reload();
+            }
         }
     }
     
@@ -99,6 +105,9 @@ export const AuthProvider = ({ children }) => {
         } catch (e) {
           if (e.response.status === 422) {
             setErrors(e.response.data.errors);
+          }
+          else if(e.response.status === 419) {
+            window.location.reload();
           }
         }
       };

@@ -43,6 +43,10 @@ export default function FooterContact() {
             code: 'wycieczka'
         },
         {
+            name: 'Zapytanie dot. urodzin',
+            code: 'urodziny'
+        },
+        {
             name: 'Inne',
             code: 'inne'
         }
@@ -73,15 +77,15 @@ export default function FooterContact() {
         <form onSubmit={submitForm} className="footerContactForm">
             <h2 className="contactInfoElement"><MdQuestionAnswer className="icon" />&ensp;Formularz kontaktowy</h2>
             <InputText name="name" placeholder="Imię i Nazwisko" value={formData.name} onChange={handleChange} type="text" required/>
-            <Dropdown className="footerContactFromDropdown" value={formData.type} onChange={handleDropdownChange} options={options} optionLabel="name" placeholder="Wybierz typ pytania" required/>
             <InputText name="email" type="email" placeholder="Adres E-Mail" value={formData.email} onChange={handleChange} required/>
+            <Dropdown className="footerContactFromDropdown" value={formData.type} onChange={handleDropdownChange} options={options} optionLabel="name" placeholder="Wybierz typ pytania" required/>
             <InputTextarea autoResize name="content" value={formData.content} onChange={handleChange} placeholder="Podaj treść pytania" required/>
             <Button className="p-button-success" type="submit" label="Wyślij"/>
             {error === 1 &&
             <p className="errorText" style={{fontWeight: '600'}}>Wypełnij wszystkie pola.</p>
             }
             {error === -1 &&
-            <p className="successText" style={{fontWeight: '600'}}>Wysłano wiadomość. <br />(Wysyłanie e-maili zostanie wkrótce wprowadzone!)</p>
+            <p className="successText" style={{fontWeight: '600'}}>Wysłano wiadomość.<br /></p>
             }
         </form>
     )

@@ -82,7 +82,7 @@ function FAQ() {
             <div id='FAQContainer'>
                 <div className='FAQElement' onClick={handleClick} ref={observedDiv}>
                     <p className='Question'>Jak można dojechać do papugarni?</p>
-                    <p className='Answer'>Do papugarni można dojechać autobusami: <strong><Bus linia='187'/>, <Bus linia='189'/>, <Bus linia='401'/>, <Bus linia='517'/>, <Bus linia='717'/>, <Bus linia='817'/></strong> - przystanek "<strong>Łopuszańska</strong>", a także samochodem - parking znajduje się <strong>za szlabanem</strong>, gdzie można pobrać bilet - <strong>darmowe parkowanie jest do 3 godzin</strong>.</p>
+                    <p className='Answer'>Do papugarni można dojechać autobusami: <strong><Bus linia='187'/>, <Bus linia='189'/>, <Bus linia='401'/>, <Bus linia='517'/>, <Bus linia='717'/>, <Bus linia='817'/></strong> - przystanek "<strong>Łopuszańska</strong>", a także samochodem - parking znajduje się <strong>za szlabanem</strong>, gdzie można pobrać bilet - <strong>darmowe parkowanie jest do 3 godzin</strong>.<br/><br/><i>*Po kliknięciu w numer linii autobusowej otworzy się rozkład jazdy</i></p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Kiedy papugarnia jest otwarta?</p>
@@ -103,7 +103,7 @@ Sobota - Niedziela: 10:00-20:00</b></p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Czy można karmić swoją karmą?</p>
-                    <p className='Answer'>Papugi można karmić <strong>tylko karmą dostępną przy kasie</strong>. Karma przyniesiona przez siebie nie może zostać użyta do karmienia papug w Papugarni.</p>
+                    <p className='Answer'>Papugi można karmić <strong>tylko karmą dostępną przy kasie</strong>. Karma przyniesiona przez siebie jest surowo zabroniona oraz nie może zostać użyta do karmienia papug w Papugarni.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Ile czasu można spędzić w Papugarni?</p>

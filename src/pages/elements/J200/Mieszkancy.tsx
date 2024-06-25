@@ -5,6 +5,7 @@ import ararau from '../../../assets/parrots/ara_ararauna.webp'
 import kakzol from '../../../assets/parrots/kakadu_zoltoczuba.webp'
 import pinki from '../../../assets/parrots/kakadu_rozowa.webp'
 import harleq from '../../../assets/parrots/ara_harlequin.webp';
+import NLink from '../../onTopElements/NLink';
 
 function Mieszkancy() {
     useEffect(() => {
@@ -60,6 +61,7 @@ function Mieszkancy() {
                         Dochowują również wierności - gdy znajdą partnera, nie porzucają go aż do śmierci.</p>
                 </div>
             </div>
+            <h2 id='allParrots'><NLink clr="#03a60b" to={{pathname: "/papugi"}}>Zobacz wszystkie nasze papugi</NLink></h2>
         </div>
      );
 }

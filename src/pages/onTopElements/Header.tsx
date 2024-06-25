@@ -12,7 +12,9 @@ import HeaderListMobile from './HeaderListMobile';
 function Header() {
     const [loc, setLoc]: any = useState();
     const [load, setLoad] = useState(0);
-    const [notify, setNotify] = useState(<p><strong><Red>UWAGA! </Red></strong>Zmienione godziny otwarcia! 30.03 10:00-18:00 / 31.01 14:00-19:00 / 01.04 13:00 - 19:00 --- W tych dniach obowiązują tylko <strong>BILETY NORMALNE I ULGOWE</strong></p>);
+    const [notify, setNotify] = useState(
+    //<p><strong><Red>UWAGA! </Red></strong>Zmienione godziny otwarcia! 30.03 10:00-18:00 / 31.01 14:00-19:00 / 01.04 13:00 - 19:00 --- W tych dniach obowiązują tylko <strong>BILETY NORMALNE I ULGOWE</strong></p>
+);
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
     const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
     

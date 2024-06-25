@@ -58,19 +58,19 @@ function Footer() {
                 </div>
                 <div id='footerContact'>
                     
-                    <div id='contactInfo'>
+                    <div id='contactInfo' itemScope itemType='https://schema.org/Zoo https://schema.org/TouristAttraction'>
                         
                         <h2 className='contactInfoElement'><BsPinMapFill id="mapPin" className='icon' />&emsp;Nasza papugarnia</h2>
-                        <h3><a href={addURL} target='_blank' rel="noreferrer">Warszawa, Al. Jerozolimskie 200<br />(Wejście od strony ul. Łopuszańskiej)<br />
+                        <h3><a href={addURL} target='_blank' rel="noreferrer" itemProp='address'>Warszawa, Al. Jerozolimskie 200<br />(Wejście od strony ul. Łopuszańskiej)<br />
                         </a>
-                        <span id='workHours'><p>Poniedziałek - Piątek: 10-19</p>
-                        <p>Sobota - Niedziela: 10-20</p></span>
+                        <span id='workHours'><p itemProp="openingHours" content="Mo-Fr, 10:00-19:00">Poniedziałek - Piątek: 10-19</p>
+                        <p itemProp='Sa,Su 10:00-20:00'>Sobota - Niedziela: 10-20</p></span>
 
                         </h3>
                         <h2 className='contactInfoElement'><BsPhoneFill id="phone" className='icon' />&emsp;Zadzwoń do nas</h2>
-                        <h3><a href={phoneURL} target='_blank' rel="noreferrer">{phone}</a></h3>
+                        <h3><a href={phoneURL} target='_blank' rel="noreferrer" itemProp='telephone'>{phone}</a></h3>
                         <h2 className='contactInfoElement'><GrMail id="mail" className='icon' />&emsp;Napisz do nas</h2>
-                        <h3><a href={mailURL} target='_blank' rel="noreferrer">{mail}</a></h3>
+                        <h3><a href={mailURL} target='_blank' rel="noreferrer" itemProp='email'>{mail}</a></h3>
                         <h3 className='contactInfoElement social'><a href={fbURL} target='_blank' rel='noreferrer' aria-label='Facebook Papugarnia Carmen'><FaFacebook id='fb'/></a><a href={igURL} target='_blank' rel='noreferrer' aria-label='Instagram Papugarnia Carmen'><FaInstagram id='ig'/></a></h3>
                     </div>
                     
@@ -87,6 +87,7 @@ function Footer() {
                 <div id='footerLinks'>
                     <a href="/">Strona główna</a>
                     <a href='/regulamin'>Regulamin Papugarni</a>
+                    <a href='/papugi'>Nasze Papugi</a>
                     <a href='/urodziny'>Oferta Urodzinowa</a>
                     <a href='/grupy'>Oferta Grupowa</a>
                     <a href='/indywidualna'>Oferta Indywidualna</a>

@@ -48,37 +48,37 @@ function Cennik() {
                     <h2 className='price'>Cena</h2>
                 </div>
                 <div className='ticket'>
-                    <h2 className='name'>Bilet Normalny</h2>
-                    <h2 className='price'>{nPrice} zł</h2>
+                    <h2 className='name' itemProp='name'>Bilet Normalny</h2>
+                    <h2 className='price' itemProp='price'>{nPrice} zł</h2>
                 </div>
                 <div className='ticket'>
-                    <h2 className='name'>Bilet Ulgowy
+                    <h2 className='name' itemProp='name'>Bilet Ulgowy
                         <p>Dzieci, uczniowie, studenci (do 26 r.ż.), emeryci, renciści, KDR, Karta Warszawiaka</p>
                     </h2>
-                    <h2 className='price'>{uPrice} zł</h2>
+                    <h2 className='price'itemProp='price'>{uPrice} zł</h2>
                 </div>
                 <div className='ticket info'>
                     <h2>Zniżki obowiązujące od poniedziałku do piątku z wyłączeniem świąt</h2>
                 </div>
                 <div className='ticket'>
-                    <h2 className='name'>Bilet Rodzinny
+                    <h2 className='name' itemProp='name'>Bilet Rodzinny
                     <p>1 dorosły + 1 dziecko<br />Dodatkowe dziecko (max. 3 dodatkowych dzieci) - {br1dPrice} zł</p></h2>
-                    <h2 className='price'>{br1Price} zł</h2>
+                    <h2 className='price'itemProp='price'>{br1Price} zł</h2>
                 </div>
                 <div className='ticket'>
-                    <h2 className='name'>Bilet Rodzinny
+                    <h2 className='name' itemProp='name'>Bilet Rodzinny
                     <p>2 dorosłych + 1 dziecko<br />Dodatkowe dziecko (max. 3 dodatkowych dzieci) - {br2dPrice} zł</p></h2>
-                    <h2 className='price'>{br2Price} zł</h2>
+                    <h2 className='price'itemProp='price'>{br2Price} zł</h2>
                 </div>
                 <div className='ticket'>
-                    <h2 className='name'>Bilet Grupowy
+                    <h2 className='name' itemProp='name'>Bilet Grupowy
                     <p>Grupa od 15 osób + Karma<br /><strong>Wymagana wcześniejsza rezerwacja</strong></p></h2>
-                    <h2 className='price'>{bgnPrice} zł/os.</h2>
+                    <h2 className='price'itemProp='price'>{bgnPrice} zł/os.</h2>
                 </div>
                 <div className='ticket'>
-                    <h2 className='name'>Bilet Grupowy
+                    <h2 className='name' itemProp='name'>Bilet Grupowy
                     <p>Grupa od 15 osób: dzieci, emeryci, studenci + Karma<br /><strong>Wymagana wcześniejsza rezerwacja</strong></p></h2>
-                    <h2 className='price'>{bguPrice} zł/os.</h2>
+                    <h2 className='price'itemProp='price'>{bguPrice} zł/os.</h2>
                 </div>
                 <p id='cennik-footer'>Karma dla papug {fPrice} zł<br />
                 Przysmak dla papug {tPrice} zł<br />
