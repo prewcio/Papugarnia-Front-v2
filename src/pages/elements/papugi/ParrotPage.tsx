@@ -81,13 +81,14 @@ export default function ParrotPage() {
                 </div>
             </div>
             <div className="parrots-other-div">
-                <h2>Zobacz też inne papugi! <NLink to={{pathname: '/papugi'}} clr={`#${Math.floor(Math.random()*16777215).toString(16)}`}>Zobacz więcej</NLink></h2>
+                <h2>Zobacz też inne papugi!</h2>
                 <div className="parrots-other">
                 {randomParrots.map((randomParrot) => (                    
                     <NLink id={randomParrot.id} to={{pathname: '/papugi/'+randomParrot.codename}} clr={`#${Math.floor(Math.random()*16777215).toString(16)}`} key={randomParrot.id}>
                         <Parrot className="parrots-other-element" key={randomParrot.id} parrotCodename={randomParrot.codename} parrotName={randomParrot.name} parrotSpiece={randomParrot.spiece} img={randomParrot.imgLink} />
                     </NLink>
                 ))}
+                <NLink to={{pathname: '/papugi'}} clr={`#${Math.floor(Math.random()*16777215).toString(16)}`}><h2 id="parrotRandomLook">Zobacz więcej</h2></NLink>
                 </div>
             </div>
         </div>

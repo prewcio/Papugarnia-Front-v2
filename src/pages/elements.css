@@ -1764,8 +1764,27 @@ footer::after{
     padding-left: 8px;
     cursor: pointer;
 }
+#kwTab {
+    color: rgb(5, 31, 182) !important;
+    transition: color .3s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#kwTab:is(:focus, :hover) {
+    color: rgb(5, 182, 43) !important;
+}
 #menuTabs div:not(:last-child) {
     border-right: 1px solid rgba(0,0,0,.3);
+}
+#parrotRandomLook button {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    transition: .3s color;
+    color: green;
+}
+#parrotRandomLook button:is(:hover, :focus) {
+    color: limegreen;
 }
 #menuTabs div:hover, #menuTabs div:focus{
     color: rgb(5, 182, 43) !important;

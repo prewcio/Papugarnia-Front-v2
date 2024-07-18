@@ -56,7 +56,10 @@ export const AuthProvider = ({ children }) => {
         setLoader(true);
         setErrors([]);
         try {
-            await axios.post("/login", data);
+            await axios.post("/login", data, { headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            }});
             await getUser();
             console.clear();
             setLoader(false);
@@ -77,7 +80,10 @@ export const AuthProvider = ({ children }) => {
     const changePassword = async ({ ...data}) => {
       setErrors([]);
       try {
-            await axios.post("/api/changePassword", data).then((e) => {
+            await axios.post("/api/changePassword", data, { headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            }}).then((e) => {
               setErrors(e.data.errors);
             });
             
@@ -98,7 +104,10 @@ export const AuthProvider = ({ children }) => {
         await csrf();
         setErrors([]);
         try {
-          await axios.post("/register", data)
+          await axios.post("/register", data, { headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          }});
           await getUser();
           navigate("/");
           window.location.reload(false);

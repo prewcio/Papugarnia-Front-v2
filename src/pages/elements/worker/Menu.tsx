@@ -3,6 +3,7 @@ import TicketPanel from './j200/Tabs/TicketsTab';
 import VoucherPanel from './j200/Tabs/VoucherTab';
 import EditAcc from './j200/Tabs/AccountTab';
 import useAuthContext from './context/AuthContext';
+import { HiOutlineExternalLink } from "react-icons/hi";
 function MenuJ200({rola}: {rola: any}) {
     const [tab, setTab] = useState("");
     useEffect(() => {
@@ -90,6 +91,7 @@ function MenuJ200({rola}: {rola: any}) {
                     <div onClick={() => {setTab('bilety')}} id='biletyTab' className='menuTab'>BILETY</div>
                     <div onClick={() => {setTab('vouchery')}}  id='voucheryTab' className='menuTab'>VOUCHERY</div>
                     {/* <div onClick={() => {setTab('dane')}}  id='daneTab' className='menuTab'>DANE</div> */}
+                    <div id='kwTabd' className='menuTab'><a href='https://moja.warszawa19115.pl/weryfikacja-kw' target='_blank' id='kwTab' className='menuTab'>KARTA WARSZAWIAKA <HiOutlineExternalLink /></a></div>
                     <div onClick={() => {setTab('konto')}}  id='kontoTab' className='menuTab'>KONTO</div>
                     <div onClick={() => {logout()}} id='logoutTab' className='menuTab'>WYLOGUJ</div>
                 </div>)
@@ -99,6 +101,7 @@ function MenuJ200({rola}: {rola: any}) {
                     <div onClick={() => {setTab('bilety')}} id='biletyTab' className='menuTab'>BILETY</div>
                     <div onClick={() => {setTab('vouchery')}}  id='voucheryTab' className='menuTab'>VOUCHERY</div>
                     {/* <div onClick={() => {setTab('dane')}}  id='daneTab' className='menuTab'>DANE</div> */}
+                    <div id='kwTabd' className='menuTab'><a href='https://moja.warszawa19115.pl/weryfikacja-kw' target='_blank' id='kwTab' className='menuTab'>KARTA WARSZAWIAKA <HiOutlineExternalLink /></a></div>
                     <div onClick={() => {setTab('konto')}}  id='kontoTab' className='menuTab'>KONTO</div>
                     <div onClick={() => {logout()}} id='logoutTab' className='menuTab'>WYLOGUJ</div>
                 </div>)
@@ -107,6 +110,7 @@ function MenuJ200({rola}: {rola: any}) {
                 <div id='menuTabs'>
                     <div onClick={() => {setTab('vouchery')}}  id='voucheryTab' className='menuTab'>VOUCHERY</div>
                     {/* <div onClick={() => {setTab('dane')}}  id='daneTab' className='menuTab'>DANE</div> */}
+                    <div id='kwTabd' className='menuTab'><a href='https://moja.warszawa19115.pl/weryfikacja-kw' target='_blank' id='kwTab' className='menuTab'>KARTA WARSZAWIAKA <HiOutlineExternalLink /></a></div>
                     <div onClick={() => {setTab('konto')}}  id='kontoTab' className='menuTab'>KONTO</div>
                     <div onClick={() => {logout()}} id='logoutTab' className='menuTab'>WYLOGUJ</div>
                 </div>)

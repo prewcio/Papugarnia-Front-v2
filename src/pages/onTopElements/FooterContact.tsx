@@ -13,6 +13,7 @@ export default function FooterContact() {
         name: "",
         type: null,
         email: "",
+        topic: "",
         content: ""
     });
     const [error, setError] = useState(0);
@@ -25,6 +26,7 @@ export default function FooterContact() {
                 name: "",
                 type: null,
                 email: "",
+                topic: "",
                 content: ""
             })
             setTimeout(() => {
@@ -79,6 +81,7 @@ export default function FooterContact() {
             <InputText name="name" placeholder="Imię i Nazwisko" value={formData.name} onChange={handleChange} type="text" required/>
             <InputText name="email" type="email" placeholder="Adres E-Mail" value={formData.email} onChange={handleChange} required/>
             <Dropdown className="footerContactFromDropdown" value={formData.type} onChange={handleDropdownChange} options={options} optionLabel="name" placeholder="Wybierz typ pytania" required/>
+            <InputText name="topic" placeholder="Podaj temat" value={formData.topic} onChange={handleChange} required/>
             <InputTextarea autoResize name="content" value={formData.content} onChange={handleChange} placeholder="Podaj treść pytania" required/>
             <Button className="p-button-success" type="submit" label="Wyślij"/>
             {error === 1 &&
