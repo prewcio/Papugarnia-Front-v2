@@ -70,16 +70,6 @@ function Cennik() {
                     <p>2 dorosłych + 1 dziecko<br />Dodatkowe dziecko (max. 3 dodatkowych dzieci) - {br2dPrice} zł</p></h2>
                     <h2 className='price'itemProp='price'>{br2Price} zł</h2>
                 </div>
-                <div className='ticket'>
-                    <h2 className='name' itemProp='name'>Bilet Grupowy
-                    <p>Grupa od 15 osób + Karma<br /><strong>Wymagana wcześniejsza rezerwacja</strong></p></h2>
-                    <h2 className='price'itemProp='price'>{bgnPrice} zł/os.</h2>
-                </div>
-                <div className='ticket'>
-                    <h2 className='name' itemProp='name'>Bilet Grupowy
-                    <p>Grupa od 15 osób: dzieci, emeryci, studenci + Karma<br /><strong>Wymagana wcześniejsza rezerwacja</strong></p></h2>
-                    <h2 className='price'itemProp='price'>{bguPrice} zł/os.</h2>
-                </div>
                 <p id='cennik-footer'>Karma dla papug {fPrice} zł<br />
                 Przysmak dla papug {tPrice} zł<br />
                 <span style={{

@@ -13,6 +13,7 @@ import GrupySP from './pages/elements/subpages/GrupySP';
 import IndywidualnaSP from './pages/elements/subpages/IndywidualnaSP';
 import Papugi from './pages/elements/papugi/Papugi';
 import ParrotPage from './pages/elements/papugi/ParrotPage';
+import Kontakt from './pages/elements/subpages/Kontakt';
 
 
 const root = ReactDOM.createRoot(
@@ -89,6 +90,7 @@ root.render(
       
       {/* Papugarnie */}
       <Route path='/papugarnia/warszawa' element={<Navigate to="/"/>}/> {/* Jerozolimskie 200 */}
+      <Route path='/kontakt' element={<Kontakt />}/>
 
       {/* Regulamin */}
       <Route path='/regulamin' element={<Regulamin />} />

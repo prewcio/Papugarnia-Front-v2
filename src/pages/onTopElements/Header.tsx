@@ -12,9 +12,7 @@ import HeaderListMobile from './HeaderListMobile';
 function Header() {
     const [loc, setLoc]: any = useState();
     const [load, setLoad] = useState(0);
-    const [notify, setNotify] = useState(
-    <p><strong><Red>UWAGA! </Red></strong>Zmienione godziny otwarcia! 30.03 10:00-18:00 / 31.01 14:00-19:00 / 01.04 13:00 - 19:00 --- W tych dniach obowiązują tylko <strong>BILETY NORMALNE I ULGOWE</strong></p>
-);
+    const [notify, setNotify] = useState(<></>);
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
     const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
     
@@ -36,6 +34,19 @@ function Header() {
     }
 
     useEffect(() => {
+        const promise = fetch(process.env.REACT_APP_API_URL+'/api/getNotification');
+        promise.then((res) => {
+            res.json().then(data => {
+                if(data) {
+                    if(new Date(data[0].startDate) < new Date()) {
+                        setNotify(data[0])
+                    }
+                }
+            })
+        })
+        .catch((err) => {
+            console.log(err);
+        });
         handleNotify(); // Initial call to set up the correct state
         setLoc("Aleje Jerozolimskie 200");
         window.addEventListener('resize', handleNotify);
@@ -113,6 +124,7 @@ function Header() {
                         <NLink clr="#D81159" to={{pathname: "/grupy"}}>GRUPY</NLink>
                         <NLink clr="#FFBC42" to={{pathname: "/indywidualna"}}>INDYWIDUALNE</NLink>
                     </HeaderList>
+                    <NLink clr="#4A90E2" to={{pathname: "/kontakt"}}>KONTAKT</NLink>
                 </div>
                 <div id='hmLinksMenu' onClick={mobileMenu}>
                     <span></span>

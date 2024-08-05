@@ -31,14 +31,16 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     align-items: center;
     gap: 20px;
     margin-left: 10px;
+    margin-right: 20px;
     padding-left: 0px;
     margin: 0;
     right: 0;
     width: fit-content; /* Adjust as needed */
     max-width: 0px;
     border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
     overflow: hidden; /* Ensures content is not visible when container's max-height is 0 */
-    transition: max-width 1s ease-in-out, padding-left .75s ease-in-out,  1s ease-in-out; /* Smooth transition for sliding up and down */
+    transition: max-width .75s ease-in-out, padding-left .75s ease-in-out, padding-right .75s ease-in-out, border-left .75s ease-in-out, border-right .75s ease-in-out; /* Smooth transition for sliding up and down */
     /* Add more styling here for visibility, background, etc. */
 }
 .parrots_list_img img{
@@ -112,7 +114,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 
 .offer {
-    margin-top: 50px;
+    font-size: 18px;
 }
 .offer ul {
     display: flex;
@@ -127,7 +129,9 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     visibility: visible !important;
     padding-left: 10px;
     border-left: 1px solid rgba(0,0,0,0.4);
-    max-width: 100vw; /* Adjust based on your content's needs. Might need a specific pixel value for smoother animation */
+    border-right: 1px solid rgba(0,0,0,0.4);
+    padding-right: 10px;
+    max-width: 400px; /* Adjust based on your content's needs. Might need a specific pixel value for smoother animation */
     /* No need to repeat the transition property here unless you want a different effect when becoming visible */
 }
 
@@ -397,7 +401,8 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 #hLinks button{
     font-family: 'Varela Round', sans-serif;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     font-size: 14px;
     color: black;
     transition: color .75s;

@@ -12,7 +12,7 @@ function Welcome() {
         <div className="content">
             <Mieszkancy />
             <Cennik />
-            <Urodziny />
+            {/* <Urodziny /> */}
             <FAQ />
         </div> 
     );
