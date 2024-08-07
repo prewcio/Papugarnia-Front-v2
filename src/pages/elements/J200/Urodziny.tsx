@@ -30,8 +30,6 @@ function Urodziny() {
     }, [])
     return ( 
         <div id='urodziny'>
-            <h1>URODZINY</h1>
-            <TxtDiv />
             <div id='toUroGrad' />
             <div id='urodziny-offer'>
                 {/* POCZĄTEK BALONÓW */}

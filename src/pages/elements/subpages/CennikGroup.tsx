@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import TxtDiv from '../TextDiv';
-import { Panel } from 'primereact/panel';
 
 
 function CennikGroup() {
@@ -24,8 +23,7 @@ function CennikGroup() {
 
     return ( 
         <div id='cennik'>
-            <h1>CENNIK DLA GRUP</h1>
-            <TxtDiv />
+            <h1>CENNIK DLA GRUP ZORGANIZOWANYCH</h1>
             <div id='cennik-table'>
                 <div className='ticket group'>
                     <h2 className='name'>Grupa cen</h2>

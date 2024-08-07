@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import TxtDiv from "../TextDiv";
 import NLink from "../../onTopElements/NLink";
 import Parrot from "./Element/Parrot";

@@ -78,7 +78,6 @@ function FAQ() {
     return ( 
         <div id='FAQ'>
             <h1>NAJCZĘSCIEJ ZADAWANE PYTANIA</h1>
-            <TxtDiv />
             <div id='FAQContainer'>
                 <div className='FAQElement' onClick={handleClick} ref={observedDiv}>
                     <p className='Question'>Jak można dojechać do papugarni?</p>

@@ -36,7 +36,6 @@ function DaneTab({rola}: {rola: any}) {
     return ( 
         <>
         <h1>Zarządzanie Voucherami</h1>
-        <TxtDiv />
         <div id='voucherPanel'>
             
         </div>

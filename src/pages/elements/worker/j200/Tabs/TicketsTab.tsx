@@ -7,18 +7,18 @@ import TxtDiv from '../../../TextDiv';
 import Loader from '../../../Loader';
 
 function TicketPanel() {
-    const [nPrice, setnPrice] = useState(36);
-    const [uPrice, setuPrice] = useState(31);
-    const [br1Price, setbr1Price] = useState(65);
-    const [br1dPrice, setbr1dPrice] = useState(25);
-    const [br2Price, setbr2Price] = useState(96);
-    const [br2dPrice, setbr2dPrice] = useState(25);
-    const [bgnPrice, setbgnPrice] = useState(33);
+    const [nPrice, setnPrice] = useState(39);
+    const [uPrice, setuPrice] = useState(33);
+    const [br1Price, setbr1Price] = useState(69);
+    const [br1dPrice, setbr1dPrice] = useState(28);
+    const [br2Price, setbr2Price] = useState(106);
+    const [br2dPrice, setbr2dPrice] = useState(28);
+    const [bgnPrice, setbgnPrice] = useState(35);
     const [bguPrice, setbguPrice] = useState(30);
     const [fPrice, setfPrice] = useState(3);
     const [tPrice, settPrice] = useState(7);
-    const [ubPrice, setUbPrice] = useState(777);
-    const [udPrice, setUdPrice] = useState(55);
+    const [ubPrice, setUbPrice] = useState(850);
+    const [udPrice, setUdPrice] = useState(60);
     const authContext = useAuthContext();
 
     if (!authContext) {
@@ -86,7 +86,6 @@ function TicketPanel() {
     return ( 
         <>
         <h1>Zarządzanie cenami</h1>
-        <TxtDiv />
         <div id='pricePanel'>
             {loader &&
                 <Loader />

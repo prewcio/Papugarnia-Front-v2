@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import MenuJ200 from './Menu';
 import Loading from '../LoadingContent';
 import useAuthContext from './context/AuthContext';
@@ -7,7 +7,7 @@ function WorkDashboard() {
     const [role, setRole] = useState("worker");
 
     const navigate = useNavigate();
-    const location = useLocation();
+    // const location = useLocation();
 
     const authContext = useAuthContext();
 
@@ -17,9 +17,9 @@ function WorkDashboard() {
 
     const { user, getUser, loader, setLoader } = authContext;
 
-    const checkRole = ((req: any) => {
-        return role === req;
-    })
+    // const checkRole = ((req: any) => {
+    //     return role === req;
+    // })
 
     useEffect(() => {
         getUser();

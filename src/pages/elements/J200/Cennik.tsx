@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import TxtDiv from '../TextDiv';
-import { Panel } from 'primereact/panel';
 
 
 function Cennik() {
-    const [nPrice, setnPrice] = useState(36);
-    const [uPrice, setuPrice] = useState(31);
-    const [br1Price, setbr1Price] = useState(62);
-    const [br1dPrice, setbr1dPrice] = useState(25);
-    const [br2Price, setbr2Price] = useState(96);
-    const [br2dPrice, setbr2dPrice] = useState(25);
-    const [bgnPrice, setbgnPrice] = useState(35);
-    const [bguPrice, setbguPrice] = useState(30);
+    const [nPrice, setnPrice] = useState(39);
+    const [uPrice, setuPrice] = useState(33);
+    const [br1Price, setbr1Price] = useState(69);
+    const [br1dPrice, setbr1dPrice] = useState(28);
+    const [br2Price, setbr2Price] = useState(106);
+    const [br2dPrice, setbr2dPrice] = useState(28);
     const [fPrice, setfPrice] = useState(3);
     const [tPrice, settPrice] = useState(7);
 
@@ -26,8 +23,6 @@ function Cennik() {
                     setbr2Price(data[3].ticketPrice);
                     setbr1dPrice(data[4].ticketPrice);
                     setbr2dPrice(data[5].ticketPrice);
-                    setbgnPrice(data[6].ticketPrice);
-                    setbguPrice(data[7].ticketPrice);
                     setfPrice(data[8].ticketPrice);
                     settPrice(data[9].ticketPrice);
                 }
@@ -41,7 +36,6 @@ function Cennik() {
     return ( 
         <div id='cennik'>
             <h1>CENNIK</h1>
-            <TxtDiv />
             <div id='cennik-table'>
                 <div className='ticket group'>
                     <h2 className='name'>Grupa cen</h2>

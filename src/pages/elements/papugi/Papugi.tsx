@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Parrot from './Element/Parrot';
-import Ararauna from '../../../assets/parrots/ara_ararauna.webp';
 import TxtDiv from '../TextDiv';
 import NLink from '../../onTopElements/NLink';
 function Papugi() {
@@ -33,7 +32,6 @@ function Papugi() {
         { parrots.length > 1 &&
         <div className='content' style={{ opacity: contentOpacity, transition: "opacity 0.3s", marginTop: '50px' }}>
             <h1>POZNAJ NASZE PAPUGI</h1>
-            <TxtDiv />
             <div className='carmen_residents'>
                 { parrots.map((parrot) => (
                     <>

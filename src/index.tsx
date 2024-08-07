@@ -1,4 +1,4 @@
-import {lazy, useEffect} from 'react';
+import {lazy} from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import './index.css';

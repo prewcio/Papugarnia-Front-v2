@@ -115,6 +115,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 
 .offer {
     font-size: 18px;
+    max-width: 95vw;
 }
 .offer ul {
     display: flex;
@@ -122,8 +123,24 @@ a:hover, a:focus, button.link:hover, button.link:focus {
     justify-content: center;
     align-items: center;
 }
+.contactForm {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.contactForm aside, .contactForm main {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    min-width: 300px;
+}
 .offer li{
     width: fit-content;
+    list-style: none;
+}
+.listDot {
+    font-size: 24px;
 }
 .list-content.visible {
     visibility: visible !important;
@@ -151,13 +168,16 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 .content{
     font-family: 'Quicksand', sans-serif;
-    margin-top: 150px;
+    margin-top: 100px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100vw;
     align-items: center;
+}
+.offer {
+    font-weight: 400;
 }
 .content h1{
      user-select: none;
@@ -325,6 +345,11 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 .parrot_main {
     height: fit-content !important;
+    transition: filter .3s ease-in-out;
+    filter: drop-shadow(0px 0px 0px transparent);
+}
+.parrot_main:is(:focus,:hover) {
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.45));
 }
 #invoiceBuyContent input, #invoiceBuyContent .p-dropdown {
     width: 300px;
@@ -833,6 +858,9 @@ footer::after{
     margin-top: 50px;
 }
 @media screen and (max-width: 1150px) and (min-width: 751px){
+    .contactForm {
+        flex-direction: column;
+    }
     #hLinks {
         transform: scale(0);
         /* width: 10px; */
@@ -872,6 +900,11 @@ footer::after{
     }
 }
 @media screen and (max-width: 750px) {
+    .contactForm {
+        flex-direction: column;
+        max-width: 95vw;
+        min-width: 80vw;
+    }
     .parrot-overview {
         flex-direction: column;
         text-align: center;
@@ -974,7 +1007,7 @@ footer::after{
     #uroKolka {
         width: 640px !important;
     }
-    #regulaminContent {
+    #regulaminContent, #groupOffer {
         width: 95% !important;
     }
     #hLinks {
@@ -1022,7 +1055,7 @@ footer::after{
     #uroOffer {
         width: 95vw !important;
     }
-    #regulaminContent {
+    #regulaminContent, #groupOffer  {
         width: 95% !important;
     }
 }
@@ -1041,7 +1074,7 @@ footer::after{
     #uroKolka {
         width: 640px !important;
     }
-    #regulaminContent {
+    #regulaminContent, #groupOffer  {
         width: 95% !important;
     }
     #tag h1{
@@ -1101,6 +1134,15 @@ footer::after{
         width: 90vw !important;
     }
 }
+@media screen and (max-width: 410px) {
+    .contactForm {
+        flex-direction: column;
+        max-width: 600px !important;
+    }
+    .contactForm textarea, .contactForm input {
+        min-width: 200px !important;
+    }
+}
 @media screen and (max-width: 330px) {
     #urodziny-offer {
         width: 100vw !important;
@@ -1121,7 +1163,7 @@ footer::after{
     #uroKolka {
         width: 640px !important;
     }
-    #regulaminContent {
+    #regulaminContent, #groupOffer  {
         width: 95% !important;
     }
     .banner::after {
@@ -1267,7 +1309,7 @@ footer::after{
     #uroContent {
         width: 90% !important;
     }
-    #regulaminContent {
+    #regulaminContent, #groupOffer  {
         width: 95% !important;
     }
     .faqimg {
@@ -1411,7 +1453,7 @@ footer::after{
     #uroContent {
         width: 85vw !important;
     }
-    #regulaminContent {
+    #regulaminContent, #groupOffer  {
         width: 95% !important;
     }
     .banner::after {
@@ -1538,6 +1580,9 @@ footer::after{
     text-align: center;
     color: black;
 }
+.content > div:not(:first-child) > h1 {
+    padding-top: 40px !important;
+}
 #cennik {
     position: relative;
 }
@@ -1663,7 +1708,7 @@ footer::after{
 #voucherCheck input {
     width: 90%;
 }
-#regulaminContent {
+#regulaminContent, #groupOffer {
     margin-top: 30px;
     width: 50%;
     text-align: left;
@@ -2086,18 +2131,32 @@ footer::after{
     flex-wrap: wrap;
     gap: 10px;
 }
-.footerContactForm {
-    max-width: 400px;
-    width: 90vw;
+.contactForm {
+    padding-top: 20px;
+    max-width: 1600px;
+    text-align: center;
+}
+.contactForm textarea, .contactForm input {
+    min-width: 400px;
+    width: 100% !important;
+}
+.contactForm textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+#contactForm {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    gap: 1px;
+    align-items: center;
 }
-.footerContactForm textarea {
-    resize: vertical;
+#contactForm button, #contactForm p {
+    width: 95%;
+}
+#contactForm p {
+    padding-top: 10px;
+    width: 80%;
+    text-wrap: wrap;
+    max-width: 800px;
 }
 .footerContactFromDropdown{
     width: 100% !important;
@@ -2268,7 +2327,7 @@ footer::after{
     padding: 10px 0 10px 0;
 }
 .FAQElement:nth-child(2n+1) {
-    background-color: rgba(0,0,0,.13);
+    background-color: rgba(0,0,0,.05);
 }
 .FAQElement{
     border-left: 1px solid rgba(0,0,0,0.3);
