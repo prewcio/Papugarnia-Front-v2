@@ -168,7 +168,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 .content{
     font-family: 'Quicksand', sans-serif;
-    margin-top: 100px;
+    margin-top: 155px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -2327,7 +2327,7 @@ footer::after{
     padding: 10px 0 10px 0;
 }
 .FAQElement:nth-child(2n+1) {
-    background-color: rgba(0,0,0,.05);
+    background-color: rgba(0,0,0,.125);
 }
 .FAQElement{
     border-left: 1px solid rgba(0,0,0,0.3);
@@ -2422,7 +2422,7 @@ footer::after{
   position: absolute;
   padding: 10px;
   box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
-  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
 }
 #urodziny-balloons .balloon > div:nth-child(1) {
   background: rgba(182, 15, 97, 0.9);

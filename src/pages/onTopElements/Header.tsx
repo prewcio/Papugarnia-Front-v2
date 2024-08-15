@@ -11,7 +11,7 @@ import HeaderListMobile from './HeaderListMobile';
 function Header() {
     const [loc, setLoc]: any = useState();
     const [load, setLoad] = useState(0);
-    const [notify, setNotify] = useState();
+    const [notify, setNotify] = useState(<p>Papugarnia w dniu <strong style={{color: 'green'}}>15 sierpnia 2024</strong> będzie czynna w <strong style={{color: 'green'}}>standardowych godzinach (10-19)</strong>. W tym dniu <strong style={{color: 'red'}}>obowiązują tylko bilety normalne i ulgowe</strong>.</p>);
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
     const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
     

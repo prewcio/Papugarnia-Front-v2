@@ -109,6 +109,10 @@ Sobota - Niedziela: 10:00-20:00</b></p>
                     <p className='Answer'>W papugarni można spędzić do <strong>1.5 godziny</strong>, jednakże <strong>średni czas</strong> przeznaczony przez gości wynosi od <strong>30 minut do godziny</strong>.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
+                    <p className='Question'>Czy jest dolny limit wiekowy?</p>
+                    <p className='Answer'><strong>Nie ma dolnego limitu wiekowego</strong> dla dzieci odwiedzających papugarnię <strong>pod opieką dorosłego</strong>. Dzieci, które skończyły <strong>12 lat</strong> mogą odwiedzać papugarnię <strong>samodzielnie</strong>.</p>
+                </div>
+                <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Kiedy papugi są najaktywniejsze?</p>
                     <p className='Answer'>Jeżeli chcemy przyjść w porze kiedy papugi są najaktywniejsze to zalecamy przyjść na otwarcie, czyli godzinę <strong>10:00</strong>. Jednak należy pamiętać, że w święta godzina otwarcia może ulec zmianie.</p>
                 </div>

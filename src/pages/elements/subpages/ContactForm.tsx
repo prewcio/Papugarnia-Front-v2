@@ -13,6 +13,7 @@ export default function ContactForm() {
         name: "",
         type: null,
         email: "",
+        phone: "",
         topic: "",
         content: "",
         confirm: false
@@ -27,6 +28,7 @@ export default function ContactForm() {
                 name: "",
                 type: null,
                 email: "",
+                phone: "",
                 confirm: false,
                 topic: "",
                 content: ""
@@ -83,6 +85,7 @@ export default function ContactForm() {
                 <aside>
                     <InputText name="name" placeholder="Imię i Nazwisko" value={formData.name} onChange={handleChange} type="text" required/>
                     <InputText name="email" type="email" placeholder="Adres E-Mail" value={formData.email} onChange={handleChange} required/>
+                    <input name="phone" type="tel" placeholder="Numer Telefonu" required className="p-inputtext p-component" pattern="[0-9\-\+\(\)\s]+" maxLength={16} minLength={6} value={formData.phone} onChange={handleChange}></input>
                     <Dropdown className="footerContactFromDropdown" value={formData.type} onChange={handleDropdownChange} options={options} optionLabel="name" placeholder="Wybierz typ pytania" required/>
                 </aside>
                 <main>
