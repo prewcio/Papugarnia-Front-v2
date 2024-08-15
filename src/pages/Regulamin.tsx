@@ -18,7 +18,7 @@ function Regulamin() {
                     <strong>5.</strong>	Przed wejściem na teren papugarni bezwzględnie należy ściągnąć i schować: zegarki, biżuterię (pierścionki,bransoletki, łańcuszki,okulary przeciwsłoneczne itp) oraz szczgólnie uważać na kolorowe paznokcie i tipsy. <br />
                     <strong>6.</strong>	Bezwzględny zakaz wchodzenia w każdego rodzaju kolczykach. <br />
                     <strong>7.</strong>	Na terenie papugarni obowiązuje bezwzględny zakaz:<br />
-                        &emsp;&emsp;a) Karmienia i brania na ręce dużych papug (czerwonych i niebieskich).<br />
+                        &emsp;&emsp;a) Karmienia i brania na ręce dużych papug (czerwonych i niebieskich) na siłę.<br />
                         &emsp;&emsp;b) Biegania, hałasowania i używania hałaśliwych urządzeń.<br />
                         &emsp;&emsp;<span className='important'>c) Karmienia pozostałych papug pokarmem innym niż specjalny, zakupiony w naszej papugarni.</span> <br />
                         &emsp;&emsp;d) Drażnienia, przeszkadzania i niepokojenia papug. <br />

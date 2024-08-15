@@ -10,8 +10,8 @@ function Footer() {
     const addURL = "https://goo.gl/maps/5Hyc4iSe29Zqwi1RA";
     const phone = "+48 506 059 999";
     const phoneURL = "tel:+48506059999";
-    const mail = "warszawa.j200@papugarniacarmen.pl";
-    const mailURL = "mailto:warszawa.j200@papugarniacarmen.pl";
+    const mail = "warszawa@papugarniacarmen.pl";
+    const mailURL = "mailto:warszawa@papugarniacarmen.pl";
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
     const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
  
@@ -51,11 +51,6 @@ function Footer() {
             <div className='scrollToTop' id="stt">
             </div>
             <footer>
-                <div id='footerContactHeader'>
-                    <h1>Papuzi Kontakt</h1>
-                    <p>Jeśli szukasz kontaktu z nami to tutaj masz kilka sposobów, aby się skontaktować!</p>
-                    <FooterContact />
-                </div>
                 <div id='footerContact'>
                     
                     <div id='contactInfo' itemScope itemType='https://schema.org/Zoo https://schema.org/TouristAttraction'>
@@ -91,8 +86,8 @@ function Footer() {
                     <a href='/urodziny'>Oferta Urodzinowa</a>
                     <a href='/grupy'>Oferta Grupowa</a>
                     <a href='/indywidualna'>Oferta Indywidualna</a>
+                    <a href='/kontakt'>Kontakt</a>
                 </div>
-                {/* <br /><a href='/polityka-prywatnosci'>POLITYKA PRYWATNOŚCI</a> */}
                 <p className='ftrCont' id='ctrCont'>&copy; {new Date().getFullYear()} Papugarnia Carmen Warszawa. Wszelkie prawa zastrzeżone.<br /><br/>Proudly made by <a href="https://prewcio.dev">Prewcioo</a></p>
             </footer>
         </>

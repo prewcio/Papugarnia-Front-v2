@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import TxtDiv from "../TextDiv";
 import NLink from "../../onTopElements/NLink";
 import Parrot from "./Element/Parrot";
@@ -68,7 +68,6 @@ export default function ParrotPage() {
     return (
         <div className="content" style={{ opacity: contentOpacity, transition: "opacity 0.3s", marginTop: '50px' }}>
             <h1>{parrot.spiece}</h1>
-            <TxtDiv />
             <div className="parrot-overview">
                 <img src={parrot.imgLink} alt={parrot.name} />
                 <div className="parrot-info">

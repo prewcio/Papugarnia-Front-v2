@@ -154,7 +154,6 @@ function VoucherPanel() {
     return (
         <>
         <h1>Zarządzanie Voucherami</h1>
-        <TxtDiv />
         <div id='voucherPanel'>
             <div id='menuTabs'>
                 <div onClick={() => {setTab('generate')}} id='generateTab' className='menuTab'>WYGENERUJ</div>

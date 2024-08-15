@@ -23,7 +23,6 @@ function Mieszkancy() {
     return ( 
         <div id='mieszkancy'>
             <h1>POZNAJ MIESZKAŃCÓW PAPUGARNI</h1>
-            <TxtDiv />
             <div className='carmen_residents'>
                 <div className='resident_main'>
                     <div className='resident_img'>

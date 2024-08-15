@@ -5,16 +5,13 @@ import harchr from '../../assets/banner-harlequin-christ.webp'
 import logochr from '../../assets/papugarnia-logo-chr.webp';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import HeaderList from './HeaderList';
-import Red from '../elements/Red';
 import HeaderListMobile from './HeaderListMobile';
 
 
 function Header() {
     const [loc, setLoc]: any = useState();
     const [load, setLoad] = useState(0);
-    const [notify, setNotify] = useState(
-    <p><strong><Red>UWAGA! </Red></strong>Zmienione godziny otwarcia! 30.03 10:00-18:00 / 31.01 14:00-19:00 / 01.04 13:00 - 19:00 --- W tych dniach obowiązują tylko <strong>BILETY NORMALNE I ULGOWE</strong></p>
-);
+    const [notify, setNotify] = useState(<p>Papugarnia w dniu <strong style={{color: 'green'}}>15 sierpnia 2024</strong> będzie czynna w <strong style={{color: 'green'}}>standardowych godzinach (10-19)</strong>. W tym dniu <strong style={{color: 'red'}}>obowiązują tylko bilety normalne i ulgowe</strong>.</p>);
     const fbURL = "https://www.facebook.com/papugarniawarszawacarmen";
     const igURL = "https://www.instagram.com/papugarniawarszawacarmen";
     
@@ -36,6 +33,19 @@ function Header() {
     }
 
     useEffect(() => {
+        const promise = fetch(process.env.REACT_APP_API_URL+'/api/getNotification');
+        promise.then((res) => {
+            res.json().then(data => {
+                if(data) {
+                    if(new Date(data[0].startDate) < new Date()) {
+                        setNotify(data[0])
+                    }
+                }
+            })
+        })
+        .catch((err) => {
+            console.log(err);
+        });
         handleNotify(); // Initial call to set up the correct state
         setLoc("Aleje Jerozolimskie 200");
         window.addEventListener('resize', handleNotify);
@@ -65,9 +75,9 @@ function Header() {
         }
     }, [load, snieg]);
     
-    const scrollToEl = (el: string) => {
-        document.getElementById(el)?.scrollIntoView({behavior: 'smooth'});
-    }
+    // const scrollToEl = (el: string) => {
+    //     document.getElementById(el)?.scrollIntoView({behavior: 'smooth'});
+    // }
 
     const handleNotify = () =>{
         const notification = document.querySelector('.notification');
@@ -82,14 +92,14 @@ function Header() {
         }
     }
 
-    const handleLinkClick = (path: string, sectionId: string) => {
-        if (window.location.pathname !== path) {
-            window.location.href = path; // Przekierowanie na inną stronę
-            scrollToEl(sectionId)
-        } else {
-            scrollToEl(sectionId); // Scroll do odpowiedniej sekcji
-        }
-    };
+    // const handleLinkClick = (path: string, sectionId: string) => {
+    //     if (window.location.pathname !== path) {
+    //         window.location.href = path; // Przekierowanie na inną stronę
+    //         scrollToEl(sectionId)
+    //     } else {
+    //         scrollToEl(sectionId); // Scroll do odpowiedniej sekcji
+    //     }
+    // };
 
     return ( 
         <>
@@ -113,6 +123,7 @@ function Header() {
                         <NLink clr="#D81159" to={{pathname: "/grupy"}}>GRUPY</NLink>
                         <NLink clr="#FFBC42" to={{pathname: "/indywidualna"}}>INDYWIDUALNE</NLink>
                     </HeaderList>
+                    <NLink clr="#4A90E2" to={{pathname: "/kontakt"}}>KONTAKT</NLink>
                 </div>
                 <div id='hmLinksMenu' onClick={mobileMenu}>
                     <span></span>
@@ -124,11 +135,13 @@ function Header() {
                 <div id='hmLinksBcg'>
                     <NLink clr="#03a60b" to={{pathname: "/"}}>STRONA GŁÓWNA</NLink>
                     <NLink clr="#2202d4" to={{pathname: "/regulamin"}}>REGULAMIN</NLink>
+                    <NLink clr="#4A90E2" to={{pathname: "/kontakt"}}>KONTAKT</NLink>
                     <HeaderListMobile label='OFERTA'>
                         <NLink clr="#4E9F3D" to={{pathname: "/urodziny"}}>URODZINY</NLink>
                         <NLink clr="#D81159" to={{pathname: "/grupy"}}>GRUPY</NLink>
                         <NLink clr="#FFBC42" to={{pathname: "/indywidualna"}}>INDYWIDUALNE</NLink>
                     </HeaderListMobile>
+                    
                     <div className='flexend'>
                         <a href={fbURL} target='_blank' rel='noreferrer' aria-label='Facebook Papugarnia Carmen'><FaFacebook id='fb'/></a>
                         <a href={igURL} target='_blank' rel='noreferrer' aria-label='Instagram Papugarnia Carmen'><FaInstagram id='ig'/></a>

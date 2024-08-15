@@ -1,6 +1,5 @@
 import React from 'react'
 function Parrot(props: any) {
-    const link = '/papugi/'+props.parrotCodename;
     const klasa = 'resident_main parrot_main parrotLink ' + props.className;
     return ( 
             <div className={klasa}>

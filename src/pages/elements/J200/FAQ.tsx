@@ -78,7 +78,6 @@ function FAQ() {
     return ( 
         <div id='FAQ'>
             <h1>NAJCZĘSCIEJ ZADAWANE PYTANIA</h1>
-            <TxtDiv />
             <div id='FAQContainer'>
                 <div className='FAQElement' onClick={handleClick} ref={observedDiv}>
                     <p className='Question'>Jak można dojechać do papugarni?</p>
@@ -108,6 +107,10 @@ Sobota - Niedziela: 10:00-20:00</b></p>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Ile czasu można spędzić w Papugarni?</p>
                     <p className='Answer'>W papugarni można spędzić do <strong>1.5 godziny</strong>, jednakże <strong>średni czas</strong> przeznaczony przez gości wynosi od <strong>30 minut do godziny</strong>.</p>
+                </div>
+                <div className='FAQElement' onClick={handleClick}>
+                    <p className='Question'>Czy jest dolny limit wiekowy?</p>
+                    <p className='Answer'><strong>Nie ma dolnego limitu wiekowego</strong> dla dzieci odwiedzających papugarnię <strong>pod opieką dorosłego</strong>. Dzieci, które skończyły <strong>12 lat</strong> mogą odwiedzać papugarnię <strong>samodzielnie</strong>.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Kiedy papugi są najaktywniejsze?</p>
