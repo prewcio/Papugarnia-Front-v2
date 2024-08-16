@@ -576,6 +576,7 @@ button.active{
 }
 .content.error {
     text-align: center;
+    margin-top: 50px !important;
     min-height: fit-content;
 }
 .reserve_warning {

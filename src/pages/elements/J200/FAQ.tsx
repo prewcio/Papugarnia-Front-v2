@@ -79,10 +79,6 @@ function FAQ() {
         <div id='FAQ'>
             <h1>NAJCZĘSCIEJ ZADAWANE PYTANIA</h1>
             <div id='FAQContainer'>
-                <div className='FAQElement' onClick={handleClick} ref={observedDiv}>
-                    <p className='Question'>Jak można dojechać do papugarni?</p>
-                    <p className='Answer'>Do papugarni można dojechać autobusami: <strong><Bus linia='187'/>, <Bus linia='189'/>, <Bus linia='401'/>, <Bus linia='517'/>, <Bus linia='717'/>, <Bus linia='817'/></strong> - przystanek "<strong>Łopuszańska</strong>", a także samochodem - parking znajduje się <strong>za szlabanem</strong>, gdzie można pobrać bilet - <strong>darmowe parkowanie jest do 3 godzin</strong>.<br/><br/><i>*Po kliknięciu w numer linii autobusowej otworzy się rozkład jazdy</i></p>
-                </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Kiedy papugarnia jest otwarta?</p>
                     <p className='Answer'>Papugarnia jest czynna 365 dni w roku nawet w <strong>święta</strong>, lecz godziny otwarta w te dni <strong>mogą się różnić.</strong><br />
@@ -90,9 +86,13 @@ Godziny otwarcia papugarni:<br />
 <b>Poniedziałek - Piątek: 10:00-19:00<br />
 Sobota - Niedziela: 10:00-20:00</b></p>
                 </div>
+                <div className='FAQElement' onClick={handleClick} ref={observedDiv}>
+                    <p className='Question'>Jak można dojechać do papugarni?</p>
+                    <p className='Answer'>Do papugarni można dojechać autobusami: <strong><Bus linia='187'/>, <Bus linia='189'/>, <Bus linia='401'/>, <Bus linia='517'/>, <Bus linia='717'/>, <Bus linia='817'/></strong> - przystanek "<strong>Łopuszańska</strong>", a także samochodem - parking znajduje się <strong>za szlabanem</strong>, gdzie można pobrać bilet - <strong>darmowe parkowanie jest do 3 godzin</strong>.<br/><br/><i>*Po kliknięciu w numer linii autobusowej otworzy się rozkład jazdy</i></p>
+                </div>
                 <div className='FAQElement' onClick={handleClick}>
-                    <p className='Question'>Ile jest u was papug?</p>
-                    <p className='Answer'>U nas jest <strong>około 70 papug</strong> m.in. Ara Zwyczajna (Ararauna), Ara Harlequin, Amazonki, Rudosterki i wiele więcej.</p>
+                    <p className='Question'>Czy wizyta w papugarni wymaga rezerwacji?</p>
+                    <p className='Answer'>Dla osób prywatnych rezerwacja <strong>nie obowiązuje</strong>. <br />Jedynie <strong>grupy zorganizowane liczące ponad 15 osób wymagają wcześniejszej rezerwacji</strong>. Można dokonać tego drogą mailową lub najlepiej drogą telefoniczną.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Jak się przygotować przed przyjściem do papugarni?</p>
@@ -105,20 +105,20 @@ Sobota - Niedziela: 10:00-20:00</b></p>
                     <p className='Answer'>Papugi można karmić <strong>tylko karmą dostępną przy kasie</strong>. Karma przyniesiona przez siebie jest surowo zabroniona oraz nie może zostać użyta do karmienia papug w Papugarni.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
-                    <p className='Question'>Ile czasu można spędzić w Papugarni?</p>
-                    <p className='Answer'>W papugarni można spędzić do <strong>1.5 godziny</strong>, jednakże <strong>średni czas</strong> przeznaczony przez gości wynosi od <strong>30 minut do godziny</strong>.</p>
-                </div>
-                <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Czy jest dolny limit wiekowy?</p>
                     <p className='Answer'><strong>Nie ma dolnego limitu wiekowego</strong> dla dzieci odwiedzających papugarnię <strong>pod opieką dorosłego</strong>. Dzieci, które skończyły <strong>12 lat</strong> mogą odwiedzać papugarnię <strong>samodzielnie</strong>.</p>
+                </div>
+                <div className='FAQElement' onClick={handleClick}>
+                    <p className='Question'>Ile czasu można spędzić w Papugarni?</p>
+                    <p className='Answer'>W papugarni można spędzić do <strong>1.5 godziny</strong>, jednakże <strong>średni czas</strong> przeznaczony przez gości wynosi od <strong>30 minut do godziny</strong>.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Kiedy papugi są najaktywniejsze?</p>
                     <p className='Answer'>Jeżeli chcemy przyjść w porze kiedy papugi są najaktywniejsze to zalecamy przyjść na otwarcie, czyli godzinę <strong>10:00</strong>. Jednak należy pamiętać, że w święta godzina otwarcia może ulec zmianie.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
-                    <p className='Question'>Czy wizyta w papugarni wymaga rezerwacji?</p>
-                    <p className='Answer'>Dla osób prywatnych rezerwacja <strong>nie obowiązuje</strong>. <br />Jedynie <strong>grupy zorganizowane liczące ponad 15 osób wymagają wcześniejszej rezerwacji</strong>. Można dokonać tego drogą mailową lub najlepiej drogą telefoniczną.</p>
+                    <p className='Question'>Ile jest u was papug?</p>
+                    <p className='Answer'>U nas jest <strong>około 70 papug</strong> m.in. Ara Zwyczajna (Ararauna), Ara Harlequin, Amazonki, Rudosterki i wiele więcej.</p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Czy można głaskać papugi?</p>
