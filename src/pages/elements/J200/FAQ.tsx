@@ -10,7 +10,6 @@ function FAQ() {
     const [height, setHeight] = useState(0);
     const observedDiv = useRef<HTMLDivElement>(null);
 
-
     const handleClick = (e: any) => {
         if (e.target.className !== 'Question' && e.target.parentNode.className !== 'Question') return;
         const questionHeight = e.currentTarget.querySelector('.Question').clientHeight;
@@ -37,7 +36,6 @@ function FAQ() {
             const questionHeight = questionElement.clientHeight;
             let hneed = questionHeight+15;
             element.style.height = `${hneed}px`;
-            
         }
     };
 
@@ -62,8 +60,6 @@ function FAQ() {
     }, [width, height]);
 
     useEffect(() => {
-        
-        
         const faqimg1 = document.getElementById('glaskanie1');
         const faqimg2 = document.getElementById('glaskanie2');
         if(faqimg1) faqimg1.setAttribute('draggable', 'false');
@@ -98,7 +94,8 @@ Sobota - Niedziela: 10:00-20:00</b></p>
                     <p className='Question'>Jak się przygotować przed przyjściem do papugarni?</p>
                     <p className='Answer'>Przed przyjściem należy:<br />
                     • <strong>Zdjąć wszelką biżuterię</strong> (kolczyki, naszyjniki, bransoletki, zegarki, itp.)<br />
-                    • <strong>Założyć ubranie którego nam nie będzie szkoda</strong> - trzeba liczyć się, że papugi mogą uszkodzić ubranie - oraz takie, które <strong>nie zawiera guzików, cekinów, ćwieków ani nic podobnego</strong></p>
+                    • <strong>Założyć ubranie którego nam nie będzie szkoda</strong> - trzeba liczyć się, że papugi mogą uszkodzić ubranie - oraz takie, które <strong>nie zawiera guzików, cekinów, ćwieków ani nic podobnego.</strong>
+                    • <strong>Jeśli nie chcemy aby papugi nas podrapały, bądź wbijały pazurki polecamy wziąć bluzkę z długim rękawem</strong></p>
                 </div>
                 <div className='FAQElement' onClick={handleClick}>
                     <p className='Question'>Czy można karmić swoją karmą?</p>

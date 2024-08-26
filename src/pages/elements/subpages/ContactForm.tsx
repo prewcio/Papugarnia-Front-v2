@@ -98,7 +98,7 @@ export default function ContactForm() {
             <p className="errorText" style={{fontWeight: '600'}}>Wypełnij wszystkie pola.</p>
             }
             {error === -1 &&
-            <p className="successText" style={{fontWeight: '600'}}>Wysłano wiadomość.<br /></p>
+            <p className="successText" style={{fontWeight: '600'}}>Wiadomość została wysłana. Odpowiemy najszybciej jak możemy 🦜❤️<br /></p>
             }
             <p>Wysyłając formularz, wyrażasz zgodę na przetwarzanie danych osobowych zgodnie z przepisami. Dobrowolne podanie danych jest konieczne do przetworzenia zapytania. Masz prawo do dostępu, poprawiania i żądania zaprzestania przetwarzania danych. Administratorem danych jest Papugarnia Carmen przy Alejach Jerozolimskich 200a, 02-486 Warszawa.</p>
         </form>

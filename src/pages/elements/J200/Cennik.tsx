@@ -47,7 +47,7 @@ function Cennik() {
                 </div>
                 <div className='ticket'>
                     <h2 className='name' itemProp='name'>Bilet Ulgowy
-                        <p>Dzieci, uczniowie, studenci (do 26 r.ż.), emeryci, renciści, KDR, Karta Warszawiaka</p>
+                        <p>Dzieci, uczniowie, studenci (do 26 r.ż.), emeryci, renciści, KDR</p>
                     </h2>
                     <h2 className='price'itemProp='price'>{uPrice} zł</h2>
                 </div>

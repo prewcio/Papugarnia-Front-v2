@@ -345,7 +345,7 @@ a:hover, a:focus, button.link:hover, button.link:focus {
 }
 .parrot_main {
     height: fit-content !important;
-    transition: filter .3s ease-in-out;
+    transition: filter .3s ease-in-out, color .3s ease-in-out;
     filter: drop-shadow(0px 0px 0px transparent);
 }
 .parrot_main:is(:focus,:hover) {
@@ -1828,14 +1828,14 @@ footer::after{
 #menuTabs div:not(:last-child) {
     border-right: 1px solid rgba(0,0,0,.3);
 }
-#parrotRandomLook button {
-    font-size: 16px !important;
+#parrotRandomLook {
+    font-size: 24px !important;
     font-weight: 600 !important;
     transition: .3s color;
-    color: green;
+    color: green !important;
 }
-#parrotRandomLook button:is(:hover, :focus) {
-    color: limegreen;
+#parrotRandomLook:is(:hover, :focus) {
+    color: limegreen !important;
 }
 #menuTabs div:hover, #menuTabs div:focus{
     color: rgb(5, 182, 43) !important;
@@ -2323,10 +2323,7 @@ footer::after{
 
     height: fit-content !important;
 }
-.Answer {
-    max-width: 95%;
-    padding: 10px 0 10px 0;
-}
+
 .FAQElement:nth-child(2n+1) {
     background-color: rgba(0,0,0,.125);
 }
@@ -2334,6 +2331,18 @@ footer::after{
     border-left: 1px solid rgba(0,0,0,0.3);
     border-right: 1px solid rgba(0,0,0,0.3);
 }
+.Answer {
+    max-width: 95%;
+    padding: 10px 0 10px 0;
+}
+.Answer.None {
+    display: none;
+}
+.FAQElement.shown .Answer {
+    display: block !important;
+}
+
+
 
 #uroOffer {
     padding-top: 135px;
