@@ -65,6 +65,10 @@ export default function ParrotPage() {
         })
     }, [codename])
 
+    useEffect(() => {
+        document.title = parrot.spiece+" - Papugarnia Carmen Warszawa"
+    })
+
     return (
         <div className="content" style={{ opacity: contentOpacity, transition: "opacity 0.3s", marginTop: '50px' }}>
             <h1>{parrot.spiece}</h1>

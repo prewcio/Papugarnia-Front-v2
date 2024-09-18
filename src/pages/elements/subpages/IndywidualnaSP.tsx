@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import Cennik from "../J200/Cennik";
 import TxtDiv from "../TextDiv";
 
 export default function IndywidualnaSP() {
+    useEffect(() => {
+        document.title = "Oferta Indywidualna - Papugarnia Carmen Warszawa"
+    })
     return(
         <div className="content">
             <h1>OFERTA INDYWIDUALNA</h1>

@@ -35,8 +35,8 @@ const Login = lazy(() => import('./pages/elements/worker/Login'));
 root.render(
   <Router>
     <AuthProvider>
-      <Suspense fallback={<Loader />}>
-        <WavyContainer />
+    <WavyContainer />
+    <Loader />
         <Header />
         {snieg &&
           <Snowfall
@@ -70,7 +70,6 @@ root.render(
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
-      </Suspense>
     </AuthProvider>
   </Router>
 );

@@ -12,6 +12,9 @@ function Papugi() {
     }]);
     const [contentOpacity, setContentOpacity] = useState(0);
     useEffect(() => {
+        document.title = "Nasze Papugi - Papugarnia Carmen Warszawa"
+    })
+    useEffect(() => {
         console.log(parrots.length)
         setContentOpacity(0);
         const promise = fetch(process.env.REACT_APP_API_URL+'/api/getAllParrots');

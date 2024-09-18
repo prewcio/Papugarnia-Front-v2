@@ -3,7 +3,7 @@ import NLink from './onTopElements/NLink';
 import Error404 from '../assets/404Image.webp';
 function NotFound() {
     useEffect(() => {
-        document.title = "Papugarnia Carmen | 404 Strona nie znaleziona"
+        document.title = "ERROR 404 - Papugarnia Carmen Warszawa"
     })
     return ( 
         <div className='content error'>

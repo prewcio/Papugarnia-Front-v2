@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import CennikGroup from "./CennikGroup";
 
 export default function GrupySP() {
+    useEffect(() => {
+        document.title = "Oferta Grupowa - Papugarnia Carmen Warszawa"
+    })
     return (
         <div className="content">
             <h1 style={{paddingTop: '20px'}}>OFERTA GRUPOWA</h1>

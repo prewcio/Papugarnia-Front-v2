@@ -3,7 +3,7 @@ import TxtDiv from './elements/TextDiv';
 
 function Regulamin() {
     useEffect(() => {
-        document.title = "Papugarnia Carmen | Regulamin"
+        document.title = "Regulamin - Papugarnia Carmen Warszawa"
     })
     return ( 
         <div className='content'>
